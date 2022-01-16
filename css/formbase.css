@@ -1,0 +1,17 @@
+
+.content{
+  
+  background: url('../img/bg_glass.png');
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  
+}
+
+
+
