@@ -28,4 +28,18 @@ export default {
   padding: 0;
 }
 
+h2 {
+
+  font-family: Nanum DdoBagDdoBag, 'Single Day', cursive, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 69px;
+  /* identical to box height */
+  
+  text-align: center;
+  
+  color: #51250A;
+}
+
 </style>

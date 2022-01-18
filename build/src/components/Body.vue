@@ -1,6 +1,8 @@
 <template>
+<div>
     <Invitation />
     <Contact />
+</div>
 </template>
 
 <script>
