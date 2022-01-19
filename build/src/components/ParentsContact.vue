@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <span class="parents-contact-container">
         <h4>{{ text }}</h4>
         <ParentContact
             title="아버지"
@@ -9,7 +9,7 @@
             text="어머니"
             :data="motherData"
         />
-    </div>
+    </span>
 </template>
 
 <script>
@@ -27,3 +27,13 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+h4 {
+    width: fit-content;
+}
+.parents-contact-container {
+    width: 30%;
+    margin: 0 10%;
+}
+</style>

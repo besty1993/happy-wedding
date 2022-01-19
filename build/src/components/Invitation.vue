@@ -28,6 +28,10 @@ export default {
 </script>
 
 <style scoped>
+* {
+    margin: 50px 0
+}
+
 h3 {
   font-family: 'Gowun Batang', serif;
   font-style: normal;

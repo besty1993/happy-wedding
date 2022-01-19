@@ -20,6 +20,6 @@ export default {
 
 <style>
 .container {
-    padding-top: 200px
+    margin: 200px 0
 }
 </style>

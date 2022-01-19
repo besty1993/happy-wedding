@@ -12,18 +12,16 @@
     <Button text="혼주분께 연락하기" 
         @btn-click="toggleParentsContact"/>
     <div v-show="showMinorContact">
-        <span>
-            <ParentsContact 
-                text="신랑측 혼주"
-                :fatherData="groomFatherInfo"
-                :motherData="groomMotherInfo"
-            />
-            <ParentsContact 
-                text="신부측 혼주"
-                :fatherData="brideFatherInfo"
-                :motherData="brideMotherInfo"
-            />
-        </span>
+        <ParentsContact 
+            text="신랑측 혼주"
+            :fatherData="groomFatherInfo"
+            :motherData="groomMotherInfo"
+        />
+        <ParentsContact 
+            text="신부측 혼주"
+            :fatherData="brideFatherInfo"
+            :motherData="brideMotherInfo"
+        />
     </div>
 </div>
 </template>
