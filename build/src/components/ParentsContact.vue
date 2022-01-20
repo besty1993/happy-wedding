@@ -35,6 +35,6 @@ h4 {
 .parents-contact-container {
     width: 30%;
     margin: 0 10%;
-    display:inline;
+    display: inline-block;
 }
 </style>

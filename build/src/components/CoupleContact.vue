@@ -1,9 +1,8 @@
 <template>
-<span>
-    <span> 
-        <h4txt>{{text}}</h4txt>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data.name}}
-    </span>
+<div>
+    <div>
+        <h4txt>{{text}}</h4txt>{{data.name}}
+    </div>
 
     <div class="space-short">
         <a href="tel:{{data.phone}}">
@@ -19,7 +18,7 @@
             <img src="../assets/icon_kakaotalk.svg">
         </a>
     </div>
-</span> 
+</div> 
 </template>
 
 <script>
