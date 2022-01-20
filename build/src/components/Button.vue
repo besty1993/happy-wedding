@@ -1,7 +1,8 @@
 <template>
     <button 
         @click="onClick()" 
-        class="btn">{{text}}</button>
+        class="btn">{{text}}
+    </button>
 </template>
 
 <script>
@@ -17,3 +18,9 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+* {
+    display: block;
+}
+</style>

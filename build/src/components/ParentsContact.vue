@@ -1,5 +1,5 @@
 <template>
-    <span class="parents-contact-container">
+    <div class="parents-contact-container">
         <h4>{{ text }}</h4>
         <ParentContact
             title="아버지"
@@ -9,7 +9,7 @@
             text="어머니"
             :data="motherData"
         />
-    </span>
+    </div>
 </template>
 
 <script>
@@ -35,5 +35,6 @@ h4 {
 .parents-contact-container {
     width: 30%;
     margin: 0 10%;
+    display:inline;
 }
 </style>
