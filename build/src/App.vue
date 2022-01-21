@@ -38,6 +38,7 @@ h2 {
   /* identical to box height */
   
   text-align: center;
+  margin: 50px;
   
   color: #51250A;
 }
