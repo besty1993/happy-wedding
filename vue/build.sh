@@ -1,2 +1,2 @@
 npm run build
-mv dist ../docs
+mv dist/* ../docs
