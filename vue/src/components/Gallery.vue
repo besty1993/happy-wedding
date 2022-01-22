@@ -4,38 +4,38 @@
 
     <div class="row">
         <div class="column">
-            <img src="wedding.jpg">
-            <img src="rocks.jpg">
-            <img src="falls2.jpg">
-            <img src="paris.jpg">
-            <img src="nature.jpg">
-            <img src="mist.jpg">
-            <img src="paris.jpg">
+            <img src="../assets/BQ2A4438.jpg">
+            <img src="../assets/BQ2A4695.jpg">
+            <img src="../assets/BQ2A5039.jpg">
+            <img src="../assets/BQ2A5165.jpg">
+            <img src="../assets/BQ2A5416.jpg">
+            <img src="../assets/BQ2A4438.jpg">
+            <img src="../assets/BQ2A4695.jpg">
         </div>
         <div class="column">
-            <img src="underwater.jpg">
-            <img src="ocean.jpg">
-            <img src="wedding.jpg">
-            <img src="mountainskies.jpg">
-            <img src="rocks.jpg">
-            <img src="underwater.jpg">
+            <img src="../assets/BQ2A5039.jpg">
+            <img src="../assets/BQ2A5165.jpg">
+            <img src="../assets/BQ2A5416.jpg">
+            <img src="../assets/BQ2A4438.jpg">
+            <img src="../assets/BQ2A4695.jpg">
+            <img src="../assets/BQ2A5039.jpg">
         </div>
         <div class="column">
-            <img src="wedding.jpg">
-            <img src="rocks.jpg">
-            <img src="falls2.jpg">
-            <img src="paris.jpg">
-            <img src="nature.jpg">
-            <img src="mist.jpg">
-            <img src="paris.jpg">
+            <img src="../assets/BQ2A5165.jpg">
+            <img src="../assets/BQ2A5416.jpg">
+            <img src="../assets/BQ2A4438.jpg">
+            <img src="../assets/BQ2A4695.jpg">
+            <img src="../assets/BQ2A5039.jpg">
+            <img src="../assets/BQ2A5165.jpg">
+            <img src="../assets/BQ2A5416.jpg">
         </div>
         <div class="column">
-            <img src="underwater.jpg">
-            <img src="ocean.jpg">
-            <img src="wedding.jpg">
-            <img src="mountainskies.jpg">
-            <img src="rocks.jpg">
-            <img src="underwater.jpg">
+            <img src="../assets/BQ2A4438.jpg">
+            <img src="../assets/BQ2A4695.jpg">
+            <img src="../assets/BQ2A5039.jpg">
+            <img src="../assets/BQ2A5165.jpg">
+            <img src="../assets/BQ2A5416.jpg">
+            <img src="../assets/BQ2A4438.jpg">
         </div>
     </div>
 </div>
@@ -51,7 +51,7 @@ export default {
 .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
+  padding: 0 10%;     /* min-width: 800px */
 }
 
 /* Create four equal columns that sits next to each other */
@@ -69,6 +69,9 @@ export default {
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
+  .row {
+    padding: 0 10%;
+  }
   .column {
     flex: 50%;
     max-width: 50%;
@@ -77,6 +80,9 @@ export default {
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
+  .row {
+    padding: 0 5%;
+  }
   .column {
     flex: 100%;
     max-width: 100%;
