@@ -5,13 +5,15 @@
     <h2>Location</h2>
     <div id="content">
         <div id="map"></div>
+        <a :href="naverLink" target="_blank">네이버 지도</a>
+        <a :href="kakaoLink" target="_blank">카카오 지도</a>
         <div id="desc">
-            <h3>숲속웨딩공원</h3>
-            <p>청주 -> 초정 -> 청안 (25분 소요)</p>
-            <p>오창 -> 증평 -> 청안 (20분 소요)</p>
-            <p>증평IC -> 증평 -> 청안 (15분 소요)</p>
-            <p>음성,괴산 -> 청안 (15분 소요)</p>
-            <p>증평 -> 청안 (7분 소요)</p>
+            <h3>{{weddingHall.name}}</h3>
+            <p>{{weddingHall.location}}</p>
+            <p>{{weddingHall.phone}}</p>
+            <a :href="`tel:${weddingHall.phone}`">
+                <img src="../assets/icon/icon_phone.svg">
+            </a>
         </div>
     </div>
 </div>
@@ -22,7 +24,14 @@ export default {
     name: 'Location',
     data() {
         return {
-            markerPosition: [36.77293976171279, 127.64764485594283]
+            markerPosition: [36.77293976171279, 127.64764485594283],
+            naverLink: 'http://naver.me/5mYh9PwT',
+            kakaoLink: 'https://place.map.kakao.com/17702466',
+            weddingHall: {
+                name: '숲속웨딩공원',
+                location: '충북 괴산군 청안면 청안읍내로1길 81-15',
+                phone: '043-838-1919'
+            }
         }
     },
     mounted() {
@@ -69,13 +78,14 @@ export default {
 #map {
     flex: 25%;
     max-width: 25%;
-    width: 25%;
+    /* width: 25%; */
     height: 400px;
-    display: inline-block;
+    text-align: center;
+    /* display: inline-block; */
 }
 
 #desc {
-    display: inline-block;
-    text-align: center;
+    /* display: inline-block; */
+    text-align: left;
 }
 </style>
