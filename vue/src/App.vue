@@ -22,11 +22,27 @@ export default {
 </script>
 
 <style>
+  /*@import './assets/styles/yourstyles.css';*/
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+	scrollbar-width: 0;
 }
+
+
+*::-webkit-scrollbar {
+	background-color: transparent;
+  border-radius: 20px;
+	width: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: rgb(209, 209, 209);
+  border-radius: 20px;
+}
+
 
 h2 {
 

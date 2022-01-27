@@ -3,7 +3,7 @@
         <h2>Invitation</h2>
         <pre>{{ text }}</pre>
 
-        <img src="../assets/invitation_flower.svg">
+        <img src="../assets/icon/invitation_flower.svg">
     </div>
 </template>
 

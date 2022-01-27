@@ -6,16 +6,16 @@
 
     <div class="space-short">
         <a :href="`tel:${data.phone}`">
-            <img src="../assets/icon_phone.svg">
+            <img src="../assets/icon/icon_phone.svg">
         </a>
         <a :href="data.messenger" target="_blank">
-            <img src="../assets/icon_messenger.svg">
+            <img src="../assets/icon/icon_messenger.svg">
         </a>
         <a :href="data.line" target="_blank">
-            <img src="../assets/icon_line.svg">
+            <img src="../assets/icon/icon_line.svg">
         </a>
         <a :href="data.kakao" target="_blank">
-            <img src="../assets/icon_kakaotalk.svg">
+            <img src="../assets/icon/icon_kakaotalk.svg">
         </a>
     </div>
 </div> 

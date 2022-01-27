@@ -4,28 +4,48 @@
 
     <div class="row">
         <div class="column">
-            <img src="../assets/thumbnail-01.jpg">
-            <img src="../assets/thumbnail-02.jpg">
-            <img src="../assets/thumbnail-03.jpg">
-            <img src="../assets/thumbnail-04.jpg">
+            
+          <a data-fancybox="gallery" href="../assets/img/img-01.jpg">
+            <img src="../assets/thumb/thumbnail-01.jpg"></a>
+          <a data-fancybox="gallery" data-src="https://lipsum.app/id/3/1024x768">
+            <img src="../assets/thumb/thumbnail-02.jpg"></a>
+          <a data-fancybox="gallery" data-src="https://lipsum.app/id/3/1024x768">
+            <img src="../assets/thumb/thumbnail-03.jpg"></a>
+          <a data-fancybox="gallery" data-src="https://lipsum.app/id/3/1024x768">
+            <img src="../assets/thumb/thumbnail-04.jpg"></a>
         </div>
+
         <div class="column">
-            <img src="../assets/thumbnail-05.jpg">
-            <img src="../assets/thumbnail-06.jpg">
-            <img src="../assets/thumbnail-07.jpg">
+          <a data-fancybox="gallery" data-src="https://lipsum.app/id/3/1024x768">
+            <img src="../assets/thumb/thumbnail-05.jpg"></a>
+          <a data-fancybox="gallery" data-src="https://lipsum.app/id/3/1024x768">
+            <img src="../assets/thumb/thumbnail-06.jpg"></a>
+          <a data-fancybox="gallery" data-src="https://lipsum.app/id/3/1024x768">
+            <img src="../assets/thumb/thumbnail-07.jpg"></a>
         </div>
+
         <div class="column">
-            <img src="../assets/thumbnail-08.jpg">
-            <img src="../assets/thumbnail-09.jpg">
-            <img src="../assets/thumbnail-10.jpg">
-            <img src="../assets/thumbnail-11.jpg">
+          <a data-fancybox="gallery" data-src="https://lipsum.app/id/3/1024x768">
+            <img src="../assets/thumb/thumbnail-08.jpg"></a>
+          <a data-fancybox="gallery" data-src="https://lipsum.app/id/3/1024x768">
+            <img src="../assets/thumb/thumbnail-09.jpg"></a>
+          <a data-fancybox="gallery" data-src="https://lipsum.app/id/3/1024x768">
+            <img src="../assets/thumb/thumbnail-10.jpg"></a>
+          <a data-fancybox="gallery" data-src="https://lipsum.app/id/3/1024x768">
+            <img src="../assets/thumb/thumbnail-11.jpg"></a>
         </div>
+
         <div class="column">
-            <img src="../assets/thumbnail-12.jpg">
-            <img src="../assets/thumbnail-13.jpg">
-            <img src="../assets/thumbnail-14.jpg">
-            <img src="../assets/thumbnail-15.jpg">
+          <a data-fancybox="gallery" data-src="https://lipsum.app/id/3/1024x768">
+            <img src="../assets/thumb/thumbnail-12.jpg"></a>
+          <a data-fancybox="gallery" data-src="https://lipsum.app/id/3/1024x768">
+            <img src="../assets/thumb/thumbnail-13.jpg"></a>
+          <a data-fancybox="gallery" data-src="https://lipsum.app/id/3/1024x768">
+            <img src="../assets/thumb/thumbnail-14.jpg"></a>
+          <a data-fancybox="gallery" data-src="https://lipsum.app/id/3/1024x768">
+            <img src="../assets/thumb/thumbnail-15.jpg"></a> 
         </div>
+    
     </div>
 </div>
 </template>
@@ -40,25 +60,19 @@ export default {
 .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 25%;     /* min-width: 800px */
-  border-style: solid;
-  border-color: black;
+  padding: 0 20%;     /* min-width: 800px */
 }
 
 /* Create four equal columns that sits next to each other */
 .column {
   flex: 25%;
   max-width: 25%;
-  padding: 0 4px;
-  border-style: solid;
-  border-color: coral;
+  padding: 0 12px;
 
 }
 
 .column img {
-  border-style: solid;
-  border-color: blue;
-  margin-top: 8px;
+  margin-top: 24px;
   vertical-align: middle;
   display: block;
   width: 100%;
