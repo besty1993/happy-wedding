@@ -46,7 +46,7 @@ export default {
                 name: "양창은",
                 phone: "+82-10-7118-8571",
                 messenger: "https://m.me/besty1993",
-                line: "",
+                line: "https://line.me/ti/p/1oS8VivYmG#~",
                 kakao: "http://qr.kakao.com/talk/GOK_CkRf2xxUlpP5txKxJfnvbgc-",
             },
             brideInfo: {
@@ -54,8 +54,8 @@ export default {
                 name: "세라오스니",
                 phone: "+82-10-2719-8571",
                 messenger: "https://m.me/waldorfxx",
-                line: "",
-                kakao: "http://qr.kakao.com/talk/EyRNfP64x018Je1.43.Ipv9ofcc-",
+                line: "https://line.me/ti/p/1f-uwtKqdS#~",
+                kakao: "http://qr.kakao.com/talk/ylX4r.oiQpxVB33way2WwdjJU.s-",
             },
             groomFatherInfo: {
                 name: "양선직",
@@ -73,13 +73,13 @@ export default {
                 name: "세라오 쏨퐁",
                 phone: "",
                 kakao: "",
-                line: "asdf",
+                line: "https://line.me/ti/p/RpmxB16kqH#~",
             },
             brideMotherInfo: {
                 name: "캄푸 쏨분",
                 phone: "",
                 kakao: "",
-                line: "asdf",
+                line: "https://line.me/ti/p/sXsY6X7cCp#~",
             },
         }
     },

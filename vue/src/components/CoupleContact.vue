@@ -5,16 +5,16 @@
     </div>
 
     <div class="space-short">
-        <a href="tel:{{data.phone}}">
+        <a :href="`tel:${data.phone}`">
             <img src="../assets/icon_phone.svg">
         </a>
-        <a href="{{data.messenger}}">
+        <a :href="data.messenger" target="_blank">
             <img src="../assets/icon_messenger.svg">
         </a>
-        <a href="{{data.line}}">
+        <a :href="data.line" target="_blank">
             <img src="../assets/icon_line.svg">
         </a>
-        <a href="{{data.kakao}}">
+        <a :href="data.kakao" target="_blank">
             <img src="../assets/icon_kakaotalk.svg">
         </a>
     </div>
