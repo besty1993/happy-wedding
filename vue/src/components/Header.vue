@@ -1,11 +1,5 @@
 <template>
-<div>
-    <picture>
-        <source srcset="../assets/header_mobile.jpg" media="(max-width: 515px)">
-        <source srcset="../assets/header_long.jpg">
-        <img src="../assets/header_long.jpg" class="responsive">
-    </picture>
-</div>
+    <div></div>
 </template>
 
 <script>
@@ -16,17 +10,27 @@ export default {
 
 <style scoped>
 div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../assets/header.jpg");
+    background-size: auto 100%;
+    background-position: center center;
+    background-repeat:no-repeat;
 }
 
-div > picture {
-    width: auto;
-    height: 100%;
+@media screen and (min-width: 1070px) {
+    div {
+        background-size: 100% auto;
+        background-position: center top;
+        height: 75vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    div {
+        background-size: 100% auto;
+    background-image: url("../assets/header_mobile.jpg");
+        height: 220vw;
+    }
 }
 </style>
