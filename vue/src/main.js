@@ -1,10 +1,9 @@
-import { createApp } from 'vue'
+import {createApp} from 'vue'
 import App from './App.vue'
+import Vuesax from 'vuesax3'
 
-import Vue from 'vue'
-import Vuesax from 'vuesax'
+import 'vuesax3/dist/vuesax.css' //Vuesax styles
+const app = createApp(App)
+app.use(Vuesax)
 
-import 'vuesax/dist/vuesax.css'
-Vue.use(Vuesax)
-
-createApp(App).mount('#app')
+app.mount('#app')
