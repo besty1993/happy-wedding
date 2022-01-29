@@ -1,5 +1,5 @@
 <template>
-<div class="container">
+<div class="contact-container">
     <h2>Contact</h2>
     <CoupleContact 
         text="신랑에게 연락하기"
@@ -92,5 +92,7 @@ export default {
 </script>
 
 <style scoped>
-
+.contact-container {
+    text-align: center;
+}
 </style>

@@ -1,8 +1,8 @@
 <template>
-    <button 
+    <vs-button 
         @click="onClick()" 
         class="btn">{{text}}
-    </button>
+    </vs-button>
 </template>
 
 <script>
@@ -21,6 +21,7 @@ export default {
 
 <style scoped>
 * {
-    display: block;
+    display: inline-block;
+    text-align: center;
 }
 </style>

@@ -3,18 +3,64 @@
 <template>
 <div class='container'>
     <h2>Location</h2>
-    <div id="content">
-        <div id="map"></div>
-        <a :href="naverLink" target="_blank">네이버 지도</a>
-        <a :href="kakaoLink" target="_blank">카카오 지도</a>
-        <div id="desc">
-            <h3>{{weddingHall.name}}</h3>
-            <p>{{weddingHall.location}}</p>
-            <p>{{weddingHall.phone}}</p>
-            <a :href="`tel:${weddingHall.phone}`">
-                <img src="../assets/icon/icon_phone.svg">
-            </a>
-        </div>
+    <vs-row vs-w="12">
+        <vs-col
+                vs-type="flex"
+                vs-lg="2"
+                vs-sm="1"
+                vs-xs="0"
+        ></vs-col>
+        <vs-col 
+                vs-type="flex" 
+                vs-justify="center" 
+                vs-align="center" 
+                vs-lg="8"
+                vs-sm="10"
+                vs-xs="12">
+            <div id="map"></div>
+        </vs-col>
+    </vs-row>
+    <vs-row vs-w="12">
+        <vs-col
+                vs-type="flex"
+                vs-lg="5"
+                vs-sm="4"
+                vs-xs="3">
+        </vs-col>
+        <vs-col 
+                vs-type="flex" 
+                vs-justify="center" 
+                vs-align="center" 
+                vs-lg="1"
+                vs-sm="2"
+                vs-xs="3">
+            <vs-button 
+                    :href="naverLink"
+                    target="_blank">
+                네이버 지도
+            </vs-button>
+        </vs-col>
+        <vs-col 
+                vs-type="flex" 
+                vs-justify="center" 
+                vs-align="center" 
+                vs-lg="1"
+                vs-sm="2"
+                vs-xs="3">
+            <vs-button
+                    :href="kakaoLink" 
+                    target="_blank">
+                카카오 지도
+            </vs-button>
+        </vs-col>
+    </vs-row>
+    <div id="desc">
+        <h3>{{weddingHall.name}}</h3>
+        <p>{{weddingHall.location}}</p>
+        <p>{{weddingHall.phone}}</p>
+        <a :href="`tel:${weddingHall.phone}`">
+            <img src="../assets/icon/icon_phone.svg">
+        </a>
     </div>
 </div>
 </template>
@@ -69,15 +115,16 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .content {
   display: flex;
   flex-wrap: wrap;
   padding: 0 10%;     /* min-width: 800px */
 }
+
 #map {
-    flex: 25%;
-    max-width: 25%;
+    flex: 10%;
+    max-width: 100%;
     /* width: 25%; */
     height: 400px;
     text-align: center;
@@ -87,5 +134,9 @@ export default {
 #desc {
     /* display: inline-block; */
     text-align: left;
+}
+
+vs-button {
+    margin: 10px;
 }
 </style>

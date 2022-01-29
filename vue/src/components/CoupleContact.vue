@@ -1,7 +1,8 @@
 <template>
 <div>
     <div>
-        <h4txt>{{text}}</h4txt>{{data.name}}
+        <h4>{{text}}</h4>
+        <p>{{data.name}}</p>
     </div>
 
     <div class="space-short">
@@ -30,3 +31,15 @@ export default {
     }
 }
 </script>
+
+<style>
+h4 {
+    display: inline-block;
+    margin: 10px;
+}
+p {
+    display: inline-block;
+    margin: 10px;
+}
+</style>
+
