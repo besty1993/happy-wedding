@@ -25,6 +25,8 @@ export default {
   /*@import './assets/styles/yourstyles.css';*/
 
 * {
+  
+
   box-sizing: border-box;
   margin: 0;
   padding: 0;

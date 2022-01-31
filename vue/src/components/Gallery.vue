@@ -4,38 +4,6 @@
     <h2>Gallery</h2>
 
 <div>
-    <!-- <vs-collapse>
-     <vs-collapse-item>
-       <div slot="header">
-         Collapse item
-       </div>
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus eros tortor, non fringilla lectus cursus et. Fusce vel nisi ante. Aliquam sit amet lectus pharetra, luctus mi sed, aliquet felis. Mauris a tortor viverra, ornare tellus in, consectetur leo.
-        <br><br>
-        Etiam nec nunc nec nisl luctus tincidunt efficitur vitae elit. Vestibulum iaculis nibh commodo neque ultrices lobortis. Cras magna massa, pretium vitae mattis varius, pharetra nec massa. Aliquam ac ex enim. Quisque consequat dui libero, vel blandit lorem porttitor sit amet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam sed lobortis nisl, quis eleifend metus.
-     </vs-collapse-item>
-     <vs-collapse-item>
-       <div slot="header">
-         Collapse item 2
-       </div>
-       Nunc auctor et leo vitae suscipit. Nullam aliquet purus scelerisque enim hendrerit tristique. Maecenas tincidunt dui arcu, a aliquet nisl venenatis vitae. Praesent mauris ligula, porta at maximus ac, rutrum vitae sapien. Donec a sapien id erat dapibus dignissim sodales in est. Donec gravida dapibus sapien at sollicitudin. Maecenas iaculis quam ex,
-       <br><br>
-       eu aliquam erat sagittis eget. Suspendisse mollis felis nec ipsum vehicula, at posuere libero viverra. Nam hendrerit dapibus eleifend. Aliquam elit nulla, tincidunt pellentesque enim mollis, consectetur placerat enim. Integer condimentum tristique ante et ullamcorper. Mauris placerat pretium ex. Nam aliquam sed tortor sit amet
-       <br><br>
-       efficitur. Mauris quis faucibus nulla. Pellentesque egestas non ipsum vel maximus.
-     </vs-collapse-item>
-     <vs-collapse-item disabled >
-       <div slot="header">
-         Collapse item 3 - Disabled
-       </div>
-       Suspendisse aliquet condimentum diam, sed aliquam nisl dapibus et. Aliquam euismod ullamcorper dolor eu
-     </vs-collapse-item>
-     <vs-collapse-item>
-       <div slot="header">
-         Collapse item 4
-       </div>
-       Suspendisse aliquet condimentum diam, sed aliquam nisl dapibus et. Aliquam euismod ullamcorper dolor eu imperdiet. Nullam eget odio at magna gravida suscipit sed vestibulum odio. Maecenas porta elit vel lectus molestie, eget aliquam enim feugiat. Vivamus nec faucibus nisl. Nunc venenatis tempus finibus.
-     </vs-collapse-item>
-    </vs-collapse> -->
   </div>
   
     <!-- <div class="row"> -->
@@ -53,13 +21,13 @@
                 class="column">
 
         <!-- <div class="column hover11"> -->
-          <a data-fancybox="gallery" href="https://bit.ly/35AqhRb">
+          <a data-fancybox="gallery" href="https://drive.google.com/uc?id=1Ogz4hmDjCfPZ-UaqHjd4FTK4ps0NRAT9">
             <img src="../assets/thumb/thumbnail-01.jpg"></a>
-          <a data-fancybox="gallery" href="https://bit.ly/32EcwQd">
+          <a data-fancybox="gallery" href="https://drive.google.com/uc?id=1wemFdOz-7Z3QR47Yca3AZTnh3U4aGuiw">
             <img src="../assets/thumb/thumbnail-02.jpg"></a>
-          <a data-fancybox="gallery" data-src="https://bit.ly/3KTaGfF">
+          <a data-fancybox="gallery" data-src="https://drive.google.com/uc?id=1Hq_0r1uhzEJDJnNgOms6suD3QZwkyN3V">
             <img src="../assets/thumb/thumbnail-03.jpg"></a>
-          <a data-fancybox="gallery" data-src="https://bit.ly/3rgSxkd">
+          <a data-fancybox="gallery" data-src="https://drive.google.com/uc?id=1fKPga6k_AXgiaw6jp8LEghBAdBcN_d9g">
             <img src="../assets/thumb/thumbnail-04.jpg"></a>
         <!-- </div> -->
         </vs-col>
@@ -72,11 +40,11 @@
                 class="column">
         <!-- <div class="column"> -->
 
-          <a data-fancybox="gallery" data-src="https://bit.ly/3r8bYeU">
+          <a data-fancybox="gallery" data-src="https://drive.google.com/uc?id=1dktXvRu2mWDzpVL6pBEfQquoAe2tBSgK">
             <img src="../assets/thumb/thumbnail-05.jpg"></a>
-          <a data-fancybox="gallery" data-src="https://bit.ly/34eH9MC">
+          <a data-fancybox="gallery" data-src="https://drive.google.com/uc?id=1XPkKTaB19BXAiXidxf0TQL4imYh6YERV">
             <img src="../assets/thumb/thumbnail-06.jpg"></a>
-          <a data-fancybox="gallery" data-src="https://bit.ly/32DctnC">
+          <a data-fancybox="gallery" data-src="https://drive.google.com/uc?id=12r2iRAMsVoF22D3YCZLACblwzym5dzWz">
             <img src="../assets/thumb/thumbnail-07.jpg"></a>
         <!-- </div> -->
         </vs-col>
@@ -103,13 +71,13 @@
                 vs-xs="5"
                 class="column">
         <!-- <div class="column"> -->
-          <a data-fancybox="gallery" data-src="https://bit.ly/3IIZPTt">
+          <a data-fancybox="gallery" data-src="https://drive.google.com/uc?id=1MCF_GulEEmB2vmGQvOqUwaMtiWneHkOt">
             <img src="../assets/thumb/thumbnail-08.jpg"></a>
-          <a data-fancybox="gallery" data-src="https://bit.ly/3Hbdliu">
+          <a data-fancybox="gallery" data-src="https://drive.google.com/uc?id=1tfJ_pVlSQfylmfZ_VxCjjFAaFB2WhJN6">
             <img src="../assets/thumb/thumbnail-09.jpg"></a>
-          <a data-fancybox="gallery" data-src="https://bit.ly/32C8986">
+          <a data-fancybox="gallery" data-src="https://drive.google.com/uc?id=1KNTzyZ7L717YMJaT8ECXiKxgxGHm2yX2">
             <img src="../assets/thumb/thumbnail-10.jpg"></a>
-          <a data-fancybox="gallery" data-src="https://bit.ly/3u8cRWK">
+          <a data-fancybox="gallery" data-src="https://drive.google.com/uc?id=10MR1RYf96tu12Ex6GbuLxhedNTc0oNh3">
             <img src="../assets/thumb/thumbnail-11.jpg"></a>
         <!-- </div> -->
         </vs-col>
@@ -120,13 +88,13 @@
                 vs-xs="5"
                 class="column">
         <!-- <div class="column"> -->
-          <a data-fancybox="gallery" data-src="https://bit.ly/3KMZLUC">
+          <a data-fancybox="gallery" data-src="https://drive.google.com/uc?id=1CphoB_IT2av158w29ALdQ22V040A5ZWc">
             <img src="../assets/thumb/thumbnail-12.jpg"></a>
-          <a data-fancybox="gallery" data-src="https://bit.ly/3r9VK50">
+          <a data-fancybox="gallery" data-src="https://drive.google.com/uc?id=19kQvMxQgCXmABkqhAkkr4-XdHfm24SmW">
             <img src="../assets/thumb/thumbnail-13.jpg"></a>
           <a data-fancybox="gallery" data-src="https://drive.google.com/uc?id=16J2PacPsu8S4L8TsGN0yUdaOg26WjKh2">
             <img src="../assets/thumb/thumbnail-14.jpg"></a>
-          <a data-fancybox="gallery" data-src="https://bit.ly/3u7Cxmn">
+          <a data-fancybox="gallery" data-src="https://drive.google.com/uc?id=1GRIpwUwOvx58W1iE_AOlqB0tUhBRnC4G">
             <img src="../assets/thumb/thumbnail-15.jpg"></a> 
         <!-- </div> -->
         </vs-col>

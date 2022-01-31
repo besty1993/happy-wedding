@@ -9,8 +9,10 @@
         text="신부에게 연락하기" 
         :data="brideInfo"
     />
-    <Button text="혼주분께 연락하기" 
+
+    <Button class="btn" color="primary" type="border" iconsvg="fa-caret-down.svg" text="혼주분께 연락하기"
         @btn-click="toggleParentsContact"/>
+        
     <div v-show="showMinorContact">
         <ParentsContact 
             text="신랑측 혼주"
@@ -95,4 +97,19 @@ export default {
 .contact-container {
     text-align: center;
 }
+
+.btn {
+    margin-top: 3vh;
+    width: 233px;
+    height: 45px;
+
+    border: 2px solid;
+    box-sizing: border-box;
+    border-radius: 50px;
+    border: blue;
+    
+}
+
+
+
 </style>

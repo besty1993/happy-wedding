@@ -12,7 +12,7 @@ export default {
 div {
     max-width: 100%;
     height: 100vh;
-    background-image: url("../assets/header.jpg");
+    background-image: url("../assets/img/header_fhd.jpg");
     background-size: auto 100%;
     background-position: center center;
     background-repeat:no-repeat;
@@ -22,14 +22,15 @@ div {
     div {
         background-size: 100% auto;
         background-position: center top;
-        height: 75vw;
+        height: 59vw;
     }
 }
 
 @media screen and (max-width: 500px) {
     div {
         background-size: 100% auto;
-    background-image: url("../assets/header_mobile.jpg");
+        background-image: url("../assets/img/header_mobile.jpg");
+        background-position: center top;
         height: 220vw;
     }
 }

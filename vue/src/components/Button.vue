@@ -1,22 +1,31 @@
 <template>
-    <vs-button 
+    <button 
         @click="onClick()" 
         class="btn">{{text}}
-    </vs-button>
+        <img :src="iconPath()">
+        <!-- <img src="../assets/icon/fa-caret-down.svg">         -->
+    </button>
 </template>
 
 <script>
 export default {
     name: 'Button',
     props: {
-        text: String
+        text: String,
+        iconsvg: String
     },
     methods: {
         onClick() {
             this.$emit('btn-click')
+        },
+        iconPath() {
+            return require('@/assets/icon/'+this.iconsvg)
         }
     },
+    
 }
+
+
 </script>
 
 <style scoped>
