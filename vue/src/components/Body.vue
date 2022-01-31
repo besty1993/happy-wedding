@@ -3,6 +3,7 @@
     <Invitation />
     <Contact />
     <Gallery />
+    <Calendar />
     <Location />
 </div>
 </template>
@@ -11,6 +12,7 @@
 import Invitation from './Invitation'
 import Contact from './Contact'
 import Gallery from './Gallery'
+import Calendar from './Calendar'
 import Location from './Location'
 
 export default {
@@ -19,6 +21,7 @@ export default {
         Invitation,
         Contact,
         Gallery,
+        Calendar,
         Location
     }
 }
