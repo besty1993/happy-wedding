@@ -5,6 +5,7 @@
     <Gallery />
     <Calendar />
     <Location />
+    <Donation />
 </div>
 </template>
 
@@ -14,6 +15,7 @@ import Contact from './Contact'
 import Gallery from './Gallery'
 import Calendar from './Calendar'
 import Location from './Location'
+import Donation from './Donation'
 
 export default {
     name: 'Body',
@@ -22,7 +24,8 @@ export default {
         Contact,
         Gallery,
         Calendar,
-        Location
+        Location,
+        Donation,
     }
 }
 </script>
