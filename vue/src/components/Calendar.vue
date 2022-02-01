@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="calendar-container">
         <h2>Wedding Day</h2>
         <v-calendar 
             color="green"
@@ -70,10 +70,19 @@ export default {
 
 
 <style scoped>
-div {
+/* Calendar Centerize */
+#calendar-container {
     text-align: center;
 }
 v-calendar {
     display: inline-block;
+}
+</style>
+
+<style>
+/* Calendar Size Adjustment */
+.vc-day {
+    width: 51px;        /* default: 34px */
+    height: 48px;       /* default: 32px */
 }
 </style>
