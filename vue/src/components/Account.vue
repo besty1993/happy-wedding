@@ -27,7 +27,7 @@ export default {
             ],
             bride: [
                 {
-                    name: '세라오스니'
+                    name: '세라오스니',
                     bank: '우리',
                     account: '',
                 },
