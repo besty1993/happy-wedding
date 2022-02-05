@@ -1,17 +1,16 @@
 <template>
-    <div>
-    </div>
+  <div></div>
 </template>
 
 <script>
 export default {
-    name: 'AccountItem',
-    props: {
-        name: String,
-        bank: String,
-        account: String,
-    }
-}
+  name: "AccountItem",
+  props: {
+    name: String,
+    bank: String,
+    account: String,
+  },
+};
 </script>
 
 <style>

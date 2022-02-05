@@ -1,18 +1,18 @@
 <template>
-    <div class="container">
-        <h2>Invitation</h2>
-        <pre>{{ text }}</pre>
+  <div class="container">
+    <h2>Invitation</h2>
+    <pre>{{ text }}</pre>
 
-        <img src="../assets/icon/invitation_flower.svg">
-    </div>
+    <img src="../assets/icon/invitation_flower.svg" />
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'Invitation',
-    data() {
-        return {
-            text:`서로 다른 두 사람의 만남이었지만
+  name: "Invitation",
+  data() {
+    return {
+      text: `서로 다른 두 사람의 만남이었지만
 같이했던 시간들은 서로가 서로에게
 꼭 필요한 존재임을 깨닫기에 충분했습니다.
 
@@ -21,25 +21,25 @@ export default {
 새로운 여행을 떠나고 자합니다.
 
 사랑으로 함께가는 길, 설레는 여정에
-소중한 여러분들을 초대합니다.`
-        }
-    }
-}
+소중한 여러분들을 초대합니다.`,
+    };
+  },
+};
 </script>
 
 <style scoped>
 * {
-    margin: 50px 0
+  margin: 50px 0;
 }
 
 pre {
-  font-family: 'Gowun Batang', serif;
+  font-family: "Gowun Batang", serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 48px;
   text-align: center;
-  color: #231F20;
+  color: #231f20;
 }
 
 img {
@@ -49,6 +49,5 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-
 }
 </style>
