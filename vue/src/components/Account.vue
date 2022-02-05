@@ -72,8 +72,8 @@ export default {
         },
         {
           name: "양선직",
-          bank: "",
-          account: "",
+          bank: "하나",
+          account: "34591027397207",
         },
       ],
       bride: [

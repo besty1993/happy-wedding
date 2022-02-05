@@ -41,11 +41,35 @@ export default {
     account: String,
   },
   methods: {
-    async copy(txt) {
-      await navigator.clipboard.writeText(txt);
-      alert("계좌번호가 복사되었습니다.")
-    }
-  }
+    copy(text) {
+
+      function selectElementText(element) {
+        if (document.selection) {
+          var range = document.body.createTextRange();
+          range.moveToElementText(element);
+          range.select();
+        } else if (window.getSelection) {
+          var range2 = document.createRange();
+          range2.selectNode(element);
+          window.getSelection().removeAllRanges();
+          window.getSelection().addRange(range2);
+        }
+      }
+
+      try {
+        var element = document.createElement('DIV');
+        element.textContent = text;
+        document.body.appendChild(element);
+        selectElementText(element);
+        document.execCommand('copy');
+        element.remove();
+
+        alert("계좌번호를 복사하였습니다.");
+      } catch {
+        alert("계좌번호 복사에 실패하였습니다.");
+      }
+    },
+  },
 };
 </script>
 

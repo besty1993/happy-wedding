@@ -8,6 +8,6 @@ import 'v-calendar/dist/style.css'
 
 const app = createApp(App)
 app.use(Vuesax)
-app.use(VCalendar, {})
+app.use(VCalendar)
 
 app.mount('#app')
