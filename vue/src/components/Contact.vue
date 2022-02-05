@@ -1,115 +1,111 @@
 <template>
-<div class="contact-container">
+  <div class="contact-container">
     <h2>Contact</h2>
-    <CoupleContact 
-        text="신랑에게 연락하기"
-        :data="groomInfo"
-    />
-    <CoupleContact 
-        text="신부에게 연락하기" 
-        :data="brideInfo"
+    <CoupleContact text="신랑에게 연락하기" :data="groomInfo" />
+    <CoupleContact text="신부에게 연락하기" :data="brideInfo" />
+
+    <Button
+      class="btn"
+      color="primary"
+      type="border"
+      iconsvg="fa-caret-down.svg"
+      text="혼주분께 연락하기"
+      @btn-click="toggleParentsContact"
     />
 
-    <Button class="btn" color="primary" type="border" iconsvg="fa-caret-down.svg" text="혼주분께 연락하기"
-        @btn-click="toggleParentsContact"/>
-        
     <div v-show="showMinorContact">
-        <ParentsContact 
-            text="신랑측 혼주"
-            :fatherData="groomFatherInfo"
-            :motherData="groomMotherInfo"
-        />
-        <ParentsContact 
-            text="신부측 혼주"
-            :fatherData="brideFatherInfo"
-            :motherData="brideMotherInfo"
-        />
+      <ParentsContact
+        text="신랑측 혼주"
+        :fatherData="groomFatherInfo"
+        :motherData="groomMotherInfo"
+      />
+      <ParentsContact
+        text="신부측 혼주"
+        :fatherData="brideFatherInfo"
+        :motherData="brideMotherInfo"
+      />
     </div>
-</div>
+  </div>
 </template>
 
 <script>
-import CoupleContact from './CoupleContact'
-import ParentsContact from './ParentsContact'
-import Button from './Button'
+import CoupleContact from "./CoupleContact";
+import ParentsContact from "./ParentsContact";
+import Button from "./Button";
 
 export default {
-    name: 'Contact',
-    components: {
-        CoupleContact,
-        ParentsContact,
-        Button,
+  name: "Contact",
+  components: {
+    CoupleContact,
+    ParentsContact,
+    Button,
+  },
+  data() {
+    return {
+      showMinorContact: false,
+      groomInfo: {
+        id: 0,
+        name: "양창은",
+        phone: "+82-10-7118-8571",
+        messenger: "https://m.me/besty1993",
+        line: "https://line.me/ti/p/1oS8VivYmG#~",
+        kakao: "http://qr.kakao.com/talk/GOK_CkRf2xxUlpP5txKxJfnvbgc-",
+      },
+      brideInfo: {
+        id: 1,
+        name: "세라오스니",
+        phone: "+82-10-2719-8571",
+        messenger: "https://m.me/waldorfxx",
+        line: "https://line.me/ti/p/1f-uwtKqdS#~",
+        kakao: "http://qr.kakao.com/talk/ylX4r.oiQpxVB33way2WwdjJU.s-",
+      },
+      groomFatherInfo: {
+        name: "양선직",
+        phone: "+82-10-5464-8571",
+        kakao: "asdf",
+        line: "",
+      },
+      groomMotherInfo: {
+        name: "유인숙",
+        phone: "+82-10-3207-8571",
+        kakao: "asdf",
+        line: "",
+      },
+      brideFatherInfo: {
+        name: "세라오 쏨퐁",
+        phone: "",
+        kakao: "",
+        line: "https://line.me/ti/p/RpmxB16kqH#~",
+      },
+      brideMotherInfo: {
+        name: "캄푸 쏨분",
+        phone: "",
+        kakao: "",
+        line: "https://line.me/ti/p/sXsY6X7cCp#~",
+      },
+    };
+  },
+  methods: {
+    toggleParentsContact() {
+      this.showMinorContact = !this.showMinorContact;
     },
-    data() {
-        return {
-            showMinorContact: false,
-            groomInfo: {
-                id: 0,
-                name: "양창은",
-                phone: "+82-10-7118-8571",
-                messenger: "https://m.me/besty1993",
-                line: "https://line.me/ti/p/1oS8VivYmG#~",
-                kakao: "http://qr.kakao.com/talk/GOK_CkRf2xxUlpP5txKxJfnvbgc-",
-            },
-            brideInfo: {
-                id: 1,
-                name: "세라오스니",
-                phone: "+82-10-2719-8571",
-                messenger: "https://m.me/waldorfxx",
-                line: "https://line.me/ti/p/1f-uwtKqdS#~",
-                kakao: "http://qr.kakao.com/talk/ylX4r.oiQpxVB33way2WwdjJU.s-",
-            },
-            groomFatherInfo: {
-                name: "양선직",
-                phone: "+82-10-5464-8571",
-                kakao: "asdf",
-                line: "",
-            },
-            groomMotherInfo: {
-                name: "유인숙",
-                phone: "+82-10-3207-8571",
-                kakao: "asdf",
-                line: "",
-            },
-            brideFatherInfo: {
-                name: "세라오 쏨퐁",
-                phone: "",
-                kakao: "",
-                line: "https://line.me/ti/p/RpmxB16kqH#~",
-            },
-            brideMotherInfo: {
-                name: "캄푸 쏨분",
-                phone: "",
-                kakao: "",
-                line: "https://line.me/ti/p/sXsY6X7cCp#~",
-            },
-        }
-    },
-    methods: {
-        toggleParentsContact() {
-            this.showMinorContact = !this.showMinorContact
-        },
-    }
-}
+  },
+};
 </script>
 
 <style scoped>
 .contact-container {
-    text-align: center;
+  text-align: center;
 }
 
 .btn {
-    margin-top: 3vh;
-    width: 233px;
-    height: 45px;
+  margin-top: 3vh;
+  width: 233px;
+  height: 45px;
 
-    border: 2px solid;
-    box-sizing: border-box;
-    border-radius: 50px;
-    border: blue;
-    
+  border: 2px solid;
+  box-sizing: border-box;
+  border-radius: 50px;
+  border: blue;
 }
-
-
-
 </style>
