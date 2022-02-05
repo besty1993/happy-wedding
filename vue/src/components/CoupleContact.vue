@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="couple-contact-container">
     <div>
       <h4>{{ text }}</h4>
       <p>{{ data.name }}</p>
@@ -35,11 +35,19 @@ export default {
 <style>
 h4 {
   display: inline-block;
-  margin: 10px;
+  margin: 16px;
 }
 p {
   display: inline-block;
-  margin: 10px;
+  margin: 16px;
+}
+
+a {
+  margin: 8px;
+}
+
+#couple-contact-container {
+  margin-bottom: 32px;
 }
 </style>
 
