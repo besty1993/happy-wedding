@@ -15,7 +15,7 @@
       <vs-col
           vs-justify="left"
           vs-align="center"
-          vs-w="8">
+          vs-w="9">
         <p class="account-item-context">{{ bank }}은행 {{ account }}</p>
         <p class="account-item-context">{{ name }}</p>
       </vs-col>
@@ -23,7 +23,7 @@
       <vs-col
           vs-justify="right"
           vs-align="center"
-          vs-w="4"
+          vs-w="3"
           class="right-align">
         <button @click="copy(account)">복사하기</button>
       </vs-col>
@@ -75,7 +75,7 @@ export default {
 
 <style scoped>
 .account-item-container {
-  width: 450px;
+  /* width: 450px; */
   margin: auto;
 }
 
