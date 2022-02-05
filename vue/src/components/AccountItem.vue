@@ -15,7 +15,7 @@
       <vs-col
           vs-justify="left"
           vs-align="center"
-          vs-w="8">
+          vs-w="9">
         <p class="account-item-context">{{ bank }}은행 {{ account }}</p>
         <p class="account-item-context">{{ name }}</p>
       </vs-col>
@@ -23,8 +23,9 @@
       <vs-col
           vs-justify="right"
           vs-align="center"
-          vs-w="4">
-        <button>복사하기</button>
+          vs-w="3"
+          class="right-align">
+        <button @click="copy(account)">복사하기</button>
       </vs-col>
     </vs-row>
   </div>
@@ -39,12 +40,42 @@ export default {
     bank: String,
     account: String,
   },
+  methods: {
+    copy(text) {
+
+      function selectElementText(element) {
+        if (document.selection) {
+          var range = document.body.createTextRange();
+          range.moveToElementText(element);
+          range.select();
+        } else if (window.getSelection) {
+          var range2 = document.createRange();
+          range2.selectNode(element);
+          window.getSelection().removeAllRanges();
+          window.getSelection().addRange(range2);
+        }
+      }
+
+      try {
+        var element = document.createElement('DIV');
+        element.textContent = text;
+        document.body.appendChild(element);
+        selectElementText(element);
+        document.execCommand('copy');
+        element.remove();
+
+        alert("계좌번호를 복사하였습니다.");
+      } catch {
+        alert("계좌번호 복사에 실패하였습니다.");
+      }
+    },
+  },
 };
 </script>
 
 <style scoped>
 .account-item-container {
-  width: 382px;
+  /* width: 450px; */
   margin: auto;
 }
 
@@ -59,6 +90,10 @@ h4.account-item-context {
 
 p.account-item-context {
   margin: 1px 0;
+}
+
+.right-align {
+  text-align: right;
 }
 
 button {

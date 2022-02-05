@@ -2,17 +2,39 @@
   <div class="account-container">
     <h2>마음 보내실 곳</h2>
 
-    <div class="account-box">
+    <!-- <div class="account-box"> -->
 
-      <div class="account-unit">
+    <vs-row
+        vs-lg="6"
+        vs-sm="8"
+        vs-xs="10"
+        vs-justify="center"
+        vs-align="center"
+        class="account-box">
+
+      <vs-row
+        vs-lg="6"
+        vs-sm="8"
+        vs-xs="10"
+          vs-justify="center"
+          vs-align="center">
+
+      <vs-col
+          vs-justify="center"
+          vs-align="center"
+          vs-lg="10"
+          vs-sm="10"
+          vs-xs="10"
+          class="account-unit">
+
+      <!-- <div class="account-unit"> -->
         <Button
           class="btn"
           color="primary"
           type="border"
           iconsvg="fa-caret-down.svg"
           text="신랑측 계좌번호"
-          @btn-click="toggleGroomAccount"
-        />
+          @btn-click="toggleGroomAccount"/>
         <div v-show="showGroomAccount">
           <AccountItem 
               text="혼주 계좌"
@@ -25,10 +47,23 @@
               :bank="groom[1].bank"
               :account="groom[1].account"/>
         </div>
-      </div>
+      </vs-col>
+      </vs-row>
 
 
-      <div class="account-unit">
+
+      <vs-row
+        vs-lg="6"
+        vs-sm="8"
+        vs-xs="10"
+          vs-justify="center"
+          vs-align="center">
+      <vs-col
+          vs-justify="center"
+          vs-lg="10"
+          vs-sm="10"
+          vs-xs="10"
+          class="account-unit">
         <Button
           class="btn"
           color="primary"
@@ -44,9 +79,9 @@
               :bank="bride[0].bank"
               :account="bride[0].account"/>
         </div>
-      </div>
-
-    </div>
+      </vs-col>
+      </vs-row>
+    </vs-row>
   </div>
 </template>
 
@@ -72,8 +107,8 @@ export default {
         },
         {
           name: "양선직",
-          bank: "",
-          account: "",
+          bank: "하나",
+          account: "34591027397207",
         },
       ],
       bride: [
@@ -103,6 +138,15 @@ export default {
 }
 
 .account-box {
-  
+  margin: 0 auto;
+  /* width: 600px; */
+  height: auto;
+  background: rgba(136, 176, 119, 0.07);
+  border-radius: 40px;
+  padding: 1px 0;
+}
+
+.account-unit {
+  margin: 30px 0;
 }
 </style>
