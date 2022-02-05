@@ -1,51 +1,29 @@
 <template>
   <div class="container">
     <h2>Gallery</h2>
-    <vs-row vs-w="12" class="row">
-      <vs-col vs-lg="2" vs-sm="1" vs-xs="1"> </vs-col>
-
-      <vs-col
-        vs-lg="2"
-        vs-sm="5"
-        vs-xs="5"
-        class="column"
-        v-for="(img_col, col_idx) in img_cols.slice(0, 2)"
-        :key="col_idx"
-      >
-        <a
-          data-fancybox="gallery"
-          v-for="(img, img_idx) in img_col"
-          :key="img_idx"
-          :data-src="img.link"
-        >
-          <img :src="img.path" />
-        </a>
-      </vs-col>
-
-      <!-- Empty Column -->
-      <vs-col vs-lg="0" vs-sm="1" vs-xs="1" id="empty-column-1"> </vs-col>
-      <vs-col vs-lg="0" vs-sm="1" vs-xs="1" id="empty-column-2"> </vs-col>
-      <!-- -->
-
-      <vs-col
-        vs-lg="2"
-        vs-sm="5"
-        vs-xs="5"
-        class="column"
-        v-for="(img_col, col_idx) in img_cols.slice(2, 4)"
-        :key="col_idx"
-      >
-        <a
-          data-fancybox="gallery"
-          v-for="(img, img_idx) in img_col"
-          :key="img_idx"
-          :data-src="img.link"
-        >
-          <img :src="img.path" />
-        </a>
-      </vs-col>
-
-      <vs-col vs-sm="1" vs-xs="1"> </vs-col>
+    <vs-row vs-w="12">
+      <vs-row 
+          vs-lg="8"
+          vs-sm="10"
+          vs-xs="10"
+          vs-justify="center"
+          class="row">
+        <vs-col
+          v-for="(img_col, col_idx) in img_cols"
+          :key="col_idx"
+          vs-lg="2"
+          vs-sm="5"
+          vs-xs="5"
+          class="column">
+          <a
+            v-for="(img, img_idx) in img_col"
+            :key="img_idx"
+            :data-src="img.link"
+            data-fancybox="gallery">
+            <img :src="img.path" />
+          </a>
+        </vs-col>
+      </vs-row>
     </vs-row>
   </div>
 </template>
