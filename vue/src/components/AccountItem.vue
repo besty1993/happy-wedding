@@ -43,8 +43,7 @@ export default {
   methods: {
     async copy(txt) {
       await navigator.clipboard.writeText(txt);
-      $.toast("계좌번호가 복사되었습니다.")
-      // alert("계좌번호가 복사되었습니다.")
+      alert("계좌번호가 복사되었습니다.")
     }
   }
 };
