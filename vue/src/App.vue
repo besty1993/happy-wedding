@@ -25,8 +25,10 @@ export default {
   /*@import './assets/styles/yourstyles.css';*/
 
 * {
-  
-
+  font-family: 'Gowun Batang', serif;
+  font-style: normal;
+  font-size: 18px;
+  color: #231F20;
   box-sizing: border-box;
   margin: 0;
   padding: 0;

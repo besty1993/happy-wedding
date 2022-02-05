@@ -8,6 +8,8 @@
             :from-page="page"
             :attributes="attrs"
             />
+
+            
     </div>
 </template>
 
@@ -58,7 +60,7 @@ export default {
                     },
                     popover: {
                         label: this.desc,
-                        visibility: "focus",
+                        visibility: "hover-focus",
                     }
                 },
             ]
