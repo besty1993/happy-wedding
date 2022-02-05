@@ -1,8 +1,8 @@
 <template>
   <div class="contact-container">
     <h2>Contact</h2>
-    <CoupleContact text="신랑에게 연락하기" :data="groomInfo" />
-    <CoupleContact text="신부에게 연락하기" :data="brideInfo" />
+    <ContactItem :data="groomObj" />
+    <ContactItem :data="brideObj" />
 
     <Button
       class="btn"
@@ -14,75 +14,137 @@
     />
 
     <div v-show="showMinorContact">
-      <ParentContact
-        text="신랑측 혼주"
-        :fatherData="groomFatherInfo"
-        :motherData="groomMotherInfo"
+      <ParentsContact
+          text="신랑측 혼주"
+          :parentsList="groomParentsList"
       />
-      <ParentContact
-        text="신부측 혼주"
-        :fatherData="brideFatherInfo"
-        :motherData="brideMotherInfo"
+      <ParentsContact
+          text="신부측 혼주"
+          :parentsList="brideParentsList"
       />
     </div>
   </div>
 </template>
 
 <script>
-import CoupleContact from "./CoupleContact";
-import ParentContact from "./ParentContact";
+import ContactItem from "./ContactItem"
+import ParentsContact from "./ParentsContact"
 import Button from "./Button";
 
 export default {
   name: "Contact",
   components: {
-    CoupleContact,
-    ParentContact,
+    ContactItem,
+    ParentsContact,
     Button,
   },
   data() {
     return {
       showMinorContact: false,
-      groomInfo: {
-        id: 0,
+      groomObj: {
+        text: "신랑에게 연락하기",
         name: "양창은",
-        phone: "+82-10-7118-8571",
-        messenger: "https://m.me/besty1993",
-        line: "https://line.me/ti/p/1oS8VivYmG#~",
-        kakao: "http://qr.kakao.com/talk/GOK_CkRf2xxUlpP5txKxJfnvbgc-",
+        contacts: [
+          {
+            key: "phone",
+            value: "+82-10-7118-8571"
+          },
+          {
+            key: "messenger",
+            value: "https://m.me/besty1993",
+          },
+          {
+            key: "line",
+            value: "https://line.me/ti/p/1oS8VivYmG#~",
+          },
+          {
+            key: "kakaotalk",
+            value: "http://qr.kakao.com/talk/GOK_CkRf2xxUlpP5txKxJfnvbgc-",
+          }
+        ]
       },
-      brideInfo: {
-        id: 1,
-        name: "세라오스니",
-        phone: "+82-10-2719-8571",
-        messenger: "https://m.me/waldorfxx",
-        line: "https://line.me/ti/p/1f-uwtKqdS#~",
-        kakao: "http://qr.kakao.com/talk/ylX4r.oiQpxVB33way2WwdjJU.s-",
+      brideObj: {
+        text: "신부에게 연락하기",
+        name:  "세라오스니",
+        contacts: [
+          {
+            key: "phone",
+            value: "+82-10-2719-8571",
+          },
+          {
+            key: "messenger",
+            value: "https://m.me/waldorfxx",
+          },
+          {
+            key: "line",
+            value: "https://line.me/ti/p/1f-uwtKqdS#~",
+          },
+          {
+            key: "kakaotalk",
+            value: "http://qr.kakao.com/talk/ylX4r.oiQpxVB33way2WwdjJU.s-",
+          },
+        ]
       },
-      groomFatherInfo: {
-        name: "양선직",
-        phone: "+82-10-5464-8571",
-        kakao: "asdf",
-        line: "",
-      },
-      groomMotherInfo: {
-        name: "유인숙",
-        phone: "+82-10-3207-8571",
-        kakao: "asdf",
-        line: "",
-      },
-      brideFatherInfo: {
-        name: "세라오 쏨퐁",
-        phone: "",
-        kakao: "",
-        line: "https://line.me/ti/p/RpmxB16kqH#~",
-      },
-      brideMotherInfo: {
-        name: "캄푸 쏨분",
-        phone: "",
-        kakao: "",
-        line: "https://line.me/ti/p/sXsY6X7cCp#~",
-      },
+      groomParentsList: [
+        {
+          text: "아버지",
+          name: "양선직",
+          contacts: [
+            {
+              key: "phone",
+              value: "+82-10-5464-8571",
+            },
+            {
+              key: "sns",
+              value: "asdf"
+            },
+          ]
+        },
+        {
+          text: "어머니",
+          name: "유인숙",
+          contacts: [
+            {
+              key: "phone",
+              value: "+82-10-3207-8571",
+            },
+            {
+              key: "sns",
+              value: "asdf"
+            },
+          ]
+        },
+      ],
+      brideParentsList: [
+        {
+          text: "아버지",
+          name: "세라오 쏨퐁",
+          contacts: [
+            {
+              key: "phone",
+              value: "+66-89-798-9751",
+            },
+            {
+              key: "sns",
+              value: "https://line.me/ti/p/RpmxB16kqH#~",
+            },
+          ]
+        },
+        {
+          text: "어머니",
+          name: "캄푸 쏨분",
+          contacts: [
+            {
+              key: "phone",
+              value: "",
+            },
+            {
+              key: "sns",
+              value: "https://line.me/ti/p/sXsY6X7cCp#~",
+            },
+          ]
+        },
+      ]
     };
   },
   methods: {
