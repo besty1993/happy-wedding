@@ -54,7 +54,7 @@ export default {
           },
           popover: {
             label: this.desc,
-            visibility: "focus",
+            visibility: "hover-focus",
           },
         },
       ];
