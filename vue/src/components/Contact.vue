@@ -14,12 +14,12 @@
     />
 
     <div v-show="showMinorContact">
-      <ParentsContact
+      <ParentContact
         text="신랑측 혼주"
         :fatherData="groomFatherInfo"
         :motherData="groomMotherInfo"
       />
-      <ParentsContact
+      <ParentContact
         text="신부측 혼주"
         :fatherData="brideFatherInfo"
         :motherData="brideMotherInfo"
@@ -30,14 +30,14 @@
 
 <script>
 import CoupleContact from "./CoupleContact";
-import ParentsContact from "./ParentsContact";
+import ParentContact from "./ParentContact";
 import Button from "./Button";
 
 export default {
   name: "Contact",
   components: {
     CoupleContact,
-    ParentsContact,
+    ParentContact,
     Button,
   },
   data() {
