@@ -136,7 +136,7 @@ export default {
           contacts: [
             {
               key: "phone",
-              value: "",
+              value: "+66-97-030-9100",
             },
             {
               key: "sns",
