@@ -103,6 +103,15 @@ export default {
 }
 
 .account-box {
-  
+  margin: 0 auto;
+  width: 600px;
+  height: auto;
+  background: rgba(136, 176, 119, 0.07);
+  border-radius: 40px;
+  padding: 1px 0;
+}
+
+.account-unit {
+  margin: 30px 0;
 }
 </style>

@@ -23,8 +23,9 @@
       <vs-col
           vs-justify="right"
           vs-align="center"
-          vs-w="4">
-        <button>복사하기</button>
+          vs-w="4"
+          class="right-align">
+        <button @click="copy(account)">복사하기</button>
       </vs-col>
     </vs-row>
   </div>
@@ -39,12 +40,19 @@ export default {
     bank: String,
     account: String,
   },
+  methods: {
+    async copy(txt) {
+      await navigator.clipboard.writeText(txt);
+      $.toast("계좌번호가 복사되었습니다.")
+      // alert("계좌번호가 복사되었습니다.")
+    }
+  }
 };
 </script>
 
 <style scoped>
 .account-item-container {
-  width: 382px;
+  width: 450px;
   margin: auto;
 }
 
@@ -59,6 +67,10 @@ h4.account-item-context {
 
 p.account-item-context {
   margin: 1px 0;
+}
+
+.right-align {
+  text-align: right;
 }
 
 button {
