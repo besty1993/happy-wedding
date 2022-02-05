@@ -158,6 +158,7 @@ export default {
 <style scoped>
 .contact-container {
   text-align: center;
+
 }
 
 </style>

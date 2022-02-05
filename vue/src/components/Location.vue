@@ -26,7 +26,6 @@
         vs-sm="2"
         vs-xs="3"
       >
-        <vs-button :href="naverLink" target="_blank"> 네이버 지도 </vs-button>
       </vs-col>
       <vs-col
         vs-type="flex"
@@ -36,15 +35,24 @@
         vs-sm="2"
         vs-xs="3"
       >
-        <vs-button :href="kakaoLink" target="_blank"> 카카오 지도 </vs-button>
       </vs-col>
     </vs-row>
+
+    <div id="outer">
+      <button class="btn" :href="naverLink" target="_blank">
+        <img :src="iconPath('icon_map_noline.svg')" />네이버 지도
+      </button>
+
+      <button class="btn" :href="kakaoLink" target="_blank">
+        <img :src="iconPath('icon_map_noline.svg')" />카카오 지도
+      </button>
+    </div>
+
     <div id="desc">
       <h3>{{ weddingHall.name }}</h3>
       <p>{{ weddingHall.location }}</p>
-      <p>{{ weddingHall.phone }}</p>
       <a :href="`tel:${weddingHall.phone}`">
-        <img src="../assets/icon/icon_phone.svg" />
+        <img class="material-icons" src="../assets/icon/icon_phone.svg" /><span class="material-icons">{{ weddingHall.phone }}</span>
       </a>
     </div>
   </div>
@@ -95,6 +103,9 @@ export default {
         position: position,
       });
     },
+    iconPath(icon) {
+      return require("@/assets/icon/" + icon);
+    },
   },
 };
 </script>
@@ -118,10 +129,109 @@ export default {
 
 #desc {
   /* display: inline-block; */
-  text-align: left;
+  text-align: center;
 }
 
-vs-button {
-  margin: 10px;
+#outer
+{
+    width:100%;
+    text-align: center;
 }
+
+button {
+  margin: auto;
+  line-height: auto;
+  width: 150px;
+  height: 36px;
+  border: 2px solid;
+  border-radius: 20px;
+  border-color: #88b077;
+  background-color: #88b077;
+  color: #fff;
+  display: inline-block;
+}
+
+.btn {
+  margin: 32px 12px 32px 12px;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+}
+
+.btn img {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+a img {
+  width: 24px;
+  height: 24px;
+}
+
+a span:hover{
+  color: #88b077;
+}
+
+.btn:hover {
+  background: rgba(136, 176, 119, 0.1);
+  color: #88b077;
+}
+
+.btn:hover img {
+  transition: 0ms;
+  transition-delay: 0ms;
+  filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(349deg) brightness(96%)
+    contrast(87%);
+}
+
+.material-icons {
+  vertical-align: middle;
+}
+
+
+
+span {
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+span:after {
+  position: absolute;
+  transition: 0.3s;
+  content: '';
+  width: 0;
+  left: 50%;
+  bottom: 0;
+  height: 3px;
+  background: #88b077;
+}
+span:nth-of-type(2):after {
+  left: 0;
+}
+span:nth-of-type(3):after {
+  right: 0;
+  left: auto;
+}
+span:nth-of-type(4):after {
+  left: 0;
+  bottom: auto;
+  top: -3px;
+  width: 100%;
+}
+span:nth-of-type(5):after {
+  height: 120%;
+  left: -10%;
+  transform: skewX(15deg);
+  z-index: -1;
+}
+span:hover:after {
+  width: 100%;
+  left: 0;
+}
+
 </style>
