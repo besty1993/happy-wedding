@@ -45,7 +45,7 @@ button {
   outline: none;
   text-decoration: none;
   border-radius: 50px;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   cursor: pointer;
