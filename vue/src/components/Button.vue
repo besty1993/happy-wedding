@@ -2,7 +2,7 @@
     <button
         @click="onClick()" 
         class="btn btn-one">{{text}}
-        <img :src="iconPath()">
+        <img :src="iconPath()" id="image">
         <!-- <img src="../assets/icon/fa-caret-down.svg">         -->
     </button>
 </template>
@@ -16,6 +16,17 @@ export default {
     },
     methods: {
         onClick() {
+            var img = document.getElementById("image");
+
+            if (img.classList.contains("rotated-image")) {
+              img.classList.remove("rotated-image")
+              img.classList.add("normal-image")
+            }
+            else {
+              img.classList.add("rotated-image")
+              img.classList.remove("normal-image")
+            }
+
             this.$emit('btn-click')
         },
         iconPath() {
@@ -39,13 +50,25 @@ export default {
 
 }
 
+.normal-image {
+  transition: 0.2s ease-in-out;
+  /* -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); */
+}
 
+.rotated-image {
+  transition: 0.2s ease-in-out;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+/* 
 button {
   position: relative;
   outline: none;
   text-decoration: none;
   border-radius: 50px;
-  /* display: flex; */
+
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -88,7 +111,7 @@ button {
   75% {
     transform: translate3d(2px, 0, 0) translateZ(0); }
   100% {
-    transform: translate3d(0, 0, 0) translateZ(0); } }
+    transform: translate3d(0, 0, 0) translateZ(0); } } */
 
 
 /* Add this to align vertically */
