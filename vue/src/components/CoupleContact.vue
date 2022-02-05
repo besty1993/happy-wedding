@@ -6,7 +6,7 @@
     </div>
 
     <div class="space-short">
-      <a :href="`tel:${data.phone}`">
+      <a :href="`tel:${data.phone}`" target="">
         <img src="../assets/icon/icon_phone.svg" />
       </a>
       <a :href="data.messenger" target="_blank">
