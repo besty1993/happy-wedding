@@ -169,7 +169,7 @@ export default {
 
 .column img {
   margin-top: 1vw;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   display: block;
   width: 100%;
   height: auto;

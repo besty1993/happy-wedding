@@ -160,14 +160,4 @@ export default {
   text-align: center;
 }
 
-.btn {
-  margin-top: 3vh;
-  width: 233px;
-  height: 45px;
-
-  border: 2px solid;
-  box-sizing: border-box;
-  border-radius: 50px;
-  border: blue;
-}
 </style>
