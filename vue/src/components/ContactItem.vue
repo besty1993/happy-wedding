@@ -16,7 +16,8 @@
         </a>
         <a 
             v-else
-            :href="contact.value">
+            :href="contact.value"
+            target="_blank">
           <img :src="getIconPath(contact.key)" />
         </a>
       </span>
