@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container transition">
     <h2>Gallery</h2>
     <vs-row vs-w="12">
       <vs-row 
@@ -124,6 +124,22 @@ export default {
   padding: 0 0.5vw;
 }
 
+.transition img {
+  background: #fff;
+  transition: 0.2s ease-out;
+}
+
+
+.transition img:hover{
+  -webkit-filter: saturate(1.3) brightness(1.2) contrast(90%) opacity(90%);
+  -moz-filter: saturate(1.3) brightness(1.2) contrast(90%) opacity(90%);
+  -ms-filter: saturate(1.3) brightness(1.2) contrast(90%) opacity(90%);
+  -o-filter: saturate(1.3) brightness(1.2) contrast(90%) opacity(90%);
+  filter: saturate(1.3) brightness(1.2) contrast(90%) opacity(90%);
+  transition: 0.3s ease-in;
+}
+
+
 /* Vuesax lg-0 Bug */
 #empty-column-1 {
   display: inline-block !important;
@@ -143,6 +159,7 @@ export default {
 .column a {
   display: block;
   width: 100%;
+  cursor: pointer;
 }
 
 .column img {
