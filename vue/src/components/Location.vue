@@ -53,7 +53,7 @@
       <p>{{ weddingHall.location }}</p>
       <a :href="`tel:${weddingHall.phone}`">
         <img class="material-icons" src="../assets/icon/icon_phone.svg" />
-          <span class="material-icons">{{ weddingHall.phone }}</span>
+        <span class="material-icons">{{ weddingHall.phone }}</span>
       </a>
     </div>
   </div>
@@ -133,10 +133,9 @@ export default {
   text-align: center;
 }
 
-#outer
-{
-    width:100%;
-    text-align: center;
+#outer {
+  width: 100%;
+  text-align: center;
 }
 
 .map-btn {
@@ -169,7 +168,7 @@ a img {
   height: 24px;
 }
 
-a span:hover{
+a span:hover {
   color: #88b077;
 }
 
@@ -189,8 +188,6 @@ a span:hover{
   vertical-align: middle;
 }
 
-
-
 span {
   flex: 1 1 auto;
   margin: 10px;
@@ -204,7 +201,7 @@ span {
 span:after {
   position: absolute;
   transition: 0.3s;
-  content: '';
+  content: "";
   width: 0;
   left: 50%;
   bottom: 0;
@@ -234,5 +231,4 @@ span:hover:after {
   width: 100%;
   left: 0;
 }
-
 </style>
