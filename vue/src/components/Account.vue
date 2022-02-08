@@ -4,83 +4,80 @@
 
     <!-- <div class="account-box"> -->
 
-    <vs-row
+    <vs-row vs-justify="center" vs-align="center">
+      <vs-col
         vs-lg="6"
         vs-sm="8"
         vs-xs="10"
         vs-justify="center"
         vs-align="center"
-        class="account-box">
+        class="account-box"
+      >
+        <vs-row vs-justify="center" vs-align="center">
+          <vs-col
+            vs-justify="center"
+            vs-align="center"
+            vs-lg="10"
+            vs-sm="10"
+            vs-xs="10"
+            class="account-unit"
+          >
+            <Button
+              class="btn"
+              color="primary"
+              type="border"
+              iconsvg="fa-caret-down.svg"
+              text="신랑측 계좌번호"
+              @btn-click="toggleGroomAccount"
+            />
+            <div v-show="showGroomAccount">
+              <AccountItem
+                v-for="(account, idx) in groom"
+                :key="idx"
+                :text="account.type"
+                :name="account.name"
+                :bank="account.bank"
+                :account="account.account"
+              />
+            </div>
+          </vs-col>
+        </vs-row>
 
-      <vs-row
-        vs-lg="6"
-        vs-sm="8"
-        vs-xs="10"
-          vs-justify="center"
-          vs-align="center">
-
-      <vs-col
+        <vs-row
+          vs-lg="6"
+          vs-sm="8"
+          vs-xs="10"
           vs-justify="center"
           vs-align="center"
-          vs-lg="10"
-          vs-sm="10"
-          vs-xs="10"
-          class="account-unit">
-
-      <!-- <div class="account-unit"> -->
-        <Button
-          class="btn"
-          color="primary"
-          type="border"
-          iconsvg="fa-caret-down.svg"
-          text="신랑측 계좌번호"
-          @btn-click="toggleGroomAccount"/>
-        <div v-show="showGroomAccount">
-          <AccountItem 
-              text="혼주 계좌"
-              :name="groom[0].name"
-              :bank="groom[0].bank"
-              :account="groom[0].account"/>
-          <AccountItem 
-              text="신랑 계좌"
-              :name="groom[1].name"
-              :bank="groom[1].bank"
-              :account="groom[1].account"/>
-        </div>
+        >
+          <vs-col
+            vs-justify="center"
+            vs-lg="10"
+            vs-sm="10"
+            vs-xs="10"
+            class="account-unit"
+          >
+            <Button
+              class="btn"
+              color="primary"
+              type="border"
+              iconsvg="fa-caret-down.svg"
+              text="신랑측 계좌번호"
+              @btn-click="toggleBrideAccount"
+            />
+            <div v-show="showBrideAccount">
+              <AccountItem
+                v-for="(account, idx) in bride"
+                :key="idx"
+                :text="account.type"
+                :name="account.name"
+                :bank="account.bank"
+                :account="account.account"
+              />
+            </div>
+          </vs-col>
+        </vs-row>
       </vs-col>
-      </vs-row>
-
-
-
-      <vs-row
-        vs-lg="6"
-        vs-sm="8"
-        vs-xs="10"
-          vs-justify="center"
-          vs-align="center">
-      <vs-col
-          vs-justify="center"
-          vs-lg="10"
-          vs-sm="10"
-          vs-xs="10"
-          class="account-unit">
-        <Button
-          class="btn"
-          color="primary"
-          type="border"
-          iconsvg="fa-caret-down.svg"
-          text="신랑측 계좌번호"
-          @btn-click="toggleBrideAccount"
-        />
-        <div v-show="showBrideAccount">
-          <AccountItem 
-              text="신부 계좌"
-              :name="bride[0].name"
-              :bank="bride[0].bank"
-              :account="bride[0].account"/>
-        </div>
-      </vs-col>
-      </vs-row>
     </vs-row>
   </div>
 </template>
@@ -101,14 +98,16 @@ export default {
       showBrideAccount: false,
       groom: [
         {
-          name: "양창은",
-          bank: "우리",
-          account: "1002745899033",
-        },
-        {
           name: "양선직",
           bank: "하나",
           account: "34591027397207",
+          type: "혼주 계좌",
+        },
+        {
+          name: "양창은",
+          bank: "우리",
+          account: "1002745899033",
+          type: "신랑 계좌",
         },
       ],
       bride: [
@@ -116,6 +115,7 @@ export default {
           name: "세라오스니",
           bank: "우리",
           account: "1002462804593",
+          type: "신부 계좌",
         },
       ],
     };
@@ -132,14 +132,11 @@ export default {
 </script>
 
 <style>
-
 .account-container {
   text-align: center;
 }
 
 .account-box {
-  margin: 0 auto;
-  /* width: 600px; */
   height: auto;
   background: rgba(136, 176, 119, 0.07);
   border-radius: 40px;
