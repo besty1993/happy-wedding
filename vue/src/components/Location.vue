@@ -39,20 +39,21 @@
     </vs-row>
 
     <div id="outer">
-      <button class="btn" :href="naverLink" target="_blank">
+      <a class="btn map-btn" :href="naverLink" target="_blank">
         <img :src="iconPath('icon_map_noline.svg')" />네이버 지도
-      </button>
+      </a>
 
-      <button class="btn" :href="kakaoLink" target="_blank">
+      <a class="btn map-btn" :href="kakaoLink" target="_blank">
         <img :src="iconPath('icon_map_noline.svg')" />카카오 지도
-      </button>
+      </a>
     </div>
 
     <div id="desc">
       <h3>{{ weddingHall.name }}</h3>
       <p>{{ weddingHall.location }}</p>
       <a :href="`tel:${weddingHall.phone}`">
-        <img class="material-icons" src="../assets/icon/icon_phone.svg" /><span class="material-icons">{{ weddingHall.phone }}</span>
+        <img class="material-icons" src="../assets/icon/icon_phone.svg" />
+          <span class="material-icons">{{ weddingHall.phone }}</span>
       </a>
     </div>
   </div>
@@ -138,7 +139,7 @@ export default {
     text-align: center;
 }
 
-button {
+.map-btn {
   margin: auto;
   line-height: auto;
   width: 150px;
