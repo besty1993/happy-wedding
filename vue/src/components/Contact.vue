@@ -118,7 +118,7 @@ export default {
       brideParentsList: [
         {
           text: "아버지",
-          name: "세라오 쏨퐁",
+          name: "세라오쏨퐁",
           contacts: [
             {
               key: "phone",
@@ -132,7 +132,7 @@ export default {
         },
         {
           text: "어머니",
-          name: "캄푸 쏨분",
+          name: "캄푸쏨분",
           contacts: [
             {
               key: "phone",
