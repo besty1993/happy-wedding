@@ -59,7 +59,6 @@
 
 
     <Button
-      class="btn"
       color="primary"
       type="border"
       iconsvg="fa-caret-down.svg"
@@ -128,7 +127,7 @@ export default {
 }
 
 .map-btn {
-  margin: auto;
+  margin: 32px 12px 32px 12px;
   line-height: auto;
   width: 150px;
   height: 36px;
@@ -141,7 +140,6 @@ export default {
 }
 
 .btn {
-  margin: 32px 12px 32px 12px;
   cursor: pointer;
   transition: all 0.5s ease 0s;
 }
