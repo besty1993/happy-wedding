@@ -13,7 +13,7 @@
         vs-sm="10"
         vs-xs="12"
       >
-        <div id="map"></div>
+        <Map :marker_pos="markerPosition"/>
       </vs-col>
     </vs-row>
     <vs-row vs-w="12">
@@ -56,14 +56,38 @@
         <span class="material-icons">{{ weddingHall.phone }}</span>
       </a>
     </div>
+
+
+    <Button
+      class="btn"
+      color="primary"
+      type="border"
+      iconsvg="fa-caret-down.svg"
+      text="하객버스 안내"
+      @btn-click="toggleBusInfo"
+    />
+
+    <div v-show="showBusInfo">
+      <BusInfo />
+    </div>
   </div>
 </template>
 
 <script>
+import Map from "./Map"
+import Button from "./Button"
+import BusInfo from "./BusInfo"
+
 export default {
   name: "Location",
+  components: {
+    Map,
+    Button,
+    BusInfo,
+  },
   data() {
     return {
+      showBusInfo: false,
       markerPosition: [36.77293976171279, 127.64764485594283],
       naverLink: "http://naver.me/5mYh9PwT",
       kakaoLink: "https://place.map.kakao.com/17702466",
@@ -74,38 +98,12 @@ export default {
       },
     };
   },
-  mounted() {
-    if (window.kakao && window.kakao.maps) {
-      this.initMap();
-    } else {
-      const script = document.createElement("script");
-      /* global kakao */
-      script.onload = () => kakao.maps.load(this.initMap);
-      script.src =
-        "//dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=dad316381d39b15875b1bc2d41641e4d";
-      document.head.appendChild(script);
-    }
-  },
   methods: {
-    initMap() {
-      const position = new kakao.maps.LatLng(...this.markerPosition);
-
-      // Generate Map
-      const container = document.getElementById("map");
-      const options = {
-        center: position,
-        level: 4,
-      };
-      this.map = new kakao.maps.Map(container, options);
-
-      // Additional code for marker
-      new kakao.maps.Marker({
-        map: this.map,
-        position: position,
-      });
-    },
     iconPath(icon) {
       return require("@/assets/icon/" + icon);
+    },
+    toggleBusInfo() {
+      this.showBusInfo = !this.showBusInfo;
     },
   },
 };
@@ -117,15 +115,6 @@ export default {
   display: flex;
   flex-wrap: wrap;
   padding: 0 10%; /* min-width: 800px */
-}
-
-#map {
-  flex: 10%;
-  max-width: 100%;
-  /* width: 25%; */
-  height: 400px;
-  text-align: center;
-  /* display: inline-block; */
 }
 
 #desc {
