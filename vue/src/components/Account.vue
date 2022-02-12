@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="account-container">
     <h2>마음 보내실 곳</h2>
 
     <!-- <div class="account-box"> -->
@@ -127,7 +127,29 @@ export default {
     toggleBrideAccount() {
       this.showBrideAccount = !this.showBrideAccount;
     },
+    hideAccountByLang() {
+      var container = document.getElementById("account-container");
+
+      if ( this.lang !== "kr" && !container.classList.contains("hidden") ) {
+        console.log("hidden!");
+        container.classList.add("hidden");
+      }
+      
+    }
   },
+  computed: {
+    lang() {
+      var langOptions = ["kr", "en", "th", "jp"];
+      var langQuery = this.$route.query.lang;
+      if (!langOptions.includes(langQuery)) {
+        langQuery = 'kr'
+      }
+      return langQuery
+    }
+  },
+  beforeMount() {
+    this.hideAccountByLang();
+  }
 };
 </script>
 
