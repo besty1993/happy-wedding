@@ -40,29 +40,30 @@
 
     <div id="outer">
       <a class="btn map-btn" :href="naverLink" target="_blank">
-        <img :src="iconPath('icon_map_noline.svg')" />네이버 지도
+        <img :src="iconPath('icon_map_noline.svg')" />{{naverBtnTxt[lang]}}
       </a>
 
       <a class="btn map-btn" :href="kakaoLink" target="_blank">
-        <img :src="iconPath('icon_map_noline.svg')" />카카오 지도
+        <img :src="iconPath('icon_map_noline.svg')" />{{kakaoBtnTxt[lang]}}
       </a>
     </div>
 
     <div id="desc">
-      <h3>{{ weddingHall.name }}</h3>
-      <p>{{ weddingHall.location }}</p>
-      <a :href="`tel:${weddingHall.phone}`">
+      <h3>{{ weddingHall.name[lang] }}</h3>
+      <p>{{ weddingHall.location[lang] }}</p>
+      <a :href="`tel:${weddingHall.phone[lang]}`">
         <img class="material-icons" src="../assets/icon/icon_phone.svg" />
-        <span class="material-icons">{{ weddingHall.phone }}</span>
+        <span class="material-icons">{{ weddingHall.phone[lang] }}</span>
       </a>
     </div>
 
 
     <Button
+      v-model= "lang"
       color="primary"
       type="border"
       iconsvg="fa-caret-down.svg"
-      text="하객버스 안내"
+      :text="rentalBusBtnTxt[lang]"
       @btn-click="toggleBusInfo"
     />
 
@@ -88,14 +89,37 @@ export default {
     return {
       showBusInfo: false,
       markerPosition: [36.77293976171279, 127.64764485594283],
+      naverBtnTxt: {
+        kr: "네이버 지도",
+        en: "Naver Map"
+      },
+      kakaoBtnTxt: {
+        kr: "카카오 지도",
+        en: "Kakao Map"
+      },
       naverLink: "http://naver.me/5mYh9PwT",
       kakaoLink: "https://place.map.kakao.com/17702466",
       weddingHall: {
-        name: "숲속웨딩공원",
-        location: "충북 괴산군 청안면 청안읍내로1길 81-15",
-        phone: "043-838-1919",
+        name: {
+          kr: "숲속웨딩공원",
+          en: "Forest Wedding Park",
+        },
+        location: {
+          kr: "충북 괴산군 청안면 청안읍내로1길 81-15",
+          en: "81-15, Cheonganeumnae-ro 1-gil, Cheongan-myeon, Goesan-gun, Chungcheongbuk-do",
+        },
+        phone: {
+          kr: "043-838-1919",
+          en: "+82-43-838-1919",
+          th: "+82-43-838-1919",
+          jp: "+82-43-838-1919",
+        },
       },
-    };
+      rentalBusBtnTxt: {
+        kr: "하객버스 안내",
+        en: "Rental Bus Info.",
+      }
+    }
   },
   methods: {
     iconPath(icon) {
@@ -104,6 +128,16 @@ export default {
     toggleBusInfo() {
       this.showBusInfo = !this.showBusInfo;
     },
+  },
+  computed: {
+    lang() {
+      var langOptions = ["kr", "en", "th", "jp"];
+      var langQuery = this.$route.query.lang;
+      if (!langOptions.includes(langQuery)) {
+        langQuery = 'kr'
+      }
+      return langQuery
+    }
   },
 };
 </script>

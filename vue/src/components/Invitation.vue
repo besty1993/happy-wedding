@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h2>Invitation</h2>
-    <pre>{{ text }}</pre>
+    <pre>{{ text[lang] }}</pre>
 
     <img src="../assets/icon/invitation_flower.svg" />
   </div>
@@ -12,7 +12,8 @@ export default {
   name: "Invitation",
   data() {
     return {
-      text: `서로 다른 두 사람의 만남이었지만
+      text: {
+        kr: `서로 다른 두 사람의 만남이었지만
 같이했던 시간들은 서로가 서로에게
 꼭 필요한 존재임을 깨닫기에 충분했습니다.
 
@@ -22,7 +23,20 @@ export default {
 
 사랑으로 함께가는 길, 설레는 여정에
 소중한 여러분들을 초대합니다.`,
+        en: `Happy Wedding
+O.M.G!!`,
+      }
     };
+  },
+  computed: {
+    lang() {
+      var langOptions = ["kr", "en", "th", "jp"];
+      var langQuery = this.$route.query.lang;
+      if (!langOptions.includes(langQuery)) {
+        langQuery = 'kr'
+      }
+      return langQuery
+    }
   },
 };
 </script>

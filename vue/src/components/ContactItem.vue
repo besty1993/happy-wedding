@@ -1,8 +1,8 @@
 <template>
   <div class="contact-item-container">
     <div class="contact-item-box">
-      <h4>{{ data.text }}</h4>
-      <p>{{ data.name }}</p>
+      <h4>{{ data.text[lang] }}</h4>
+      <p>{{ data.name[lang] }}</p>
     </div>
 
     <div class="space-short">
@@ -35,7 +35,17 @@ export default {
     getIconPath: function(iconType) {
       return require('../assets/icon/icon_'+iconType+'.svg')
     }
-  }
+  },
+  computed: {
+    lang() {
+      var langOptions = ["kr", "en", "th", "jp"];
+      var langQuery = this.$route.query.lang;
+      if (!langOptions.includes(langQuery)) {
+        langQuery = 'kr'
+      }
+      return langQuery
+    }
+  },
 };
 </script>
 

@@ -5,21 +5,24 @@
     <ContactItem :data="brideObj" />
 
     <Button
+      v-model="lang"
       class="btn"
       color="primary"
       type="border"
       iconsvg="fa-caret-down.svg"
-      text="혼주분께 연락하기"
+      :text="btnTxt[lang]"
       @btn-click="toggleParentsContact"
     />
 
     <div v-show="showMinorContact">
       <ParentsContact
-          text="신랑측 혼주"
+          v-model="lang"
+          :text="groomParentsTxt[lang]"
           :parentsList="groomParentsList"
       />
       <ParentsContact
-          text="신부측 혼주"
+          v-model="lang"
+          :text="brideParentsTxt[lang]"
           :parentsList="brideParentsList"
       />
     </div>
@@ -42,8 +45,18 @@ export default {
     return {
       showMinorContact: false,
       groomObj: {
-        text: "신랑에게 연락하기",
-        name: "양창은",
+        text: {
+          kr: "신랑에게 연락하기",
+          en: "Contact the Groom",
+          th: "asdf",
+          jp: "asdf",
+        },
+        name: {
+          kr: "양창은",
+          en: "Changeun Yang",
+          th: "asdf2",
+          jp: "asdf3",
+        },
         contacts: [
           {
             key: "phone",
@@ -64,8 +77,18 @@ export default {
         ]
       },
       brideObj: {
-        text: "신부에게 연락하기",
-        name:  "세라오스니",
+        text: {
+          kr: "신부에게 연락하기",
+          en: "Contact the Bride",
+          th: "asdf",
+          jp: "asdf",
+        },
+        name: {
+          kr: "세라오스니",
+          en: "Sunee Sae-lao",
+          th: "asdf2",
+          jp: "asdf3",
+        },
         contacts: [
           {
             key: "phone",
@@ -85,10 +108,30 @@ export default {
           },
         ]
       },
+      btnTxt: {
+        kr: "혼주에게 연락하기",
+        en: "Contact Parents",
+        th: "asdf",
+        jp: "asdf"
+      },
+      groomParentsTxt: {
+        kr: "신랑측 혼주",
+        en: "Parents of the Groom"
+      },
       groomParentsList: [
         {
-          text: "아버지",
-          name: "양선직",
+          text: {
+            kr: "아버지",
+            en: "Father",
+            th: "asdf",
+            jp: "asdf",
+          },
+          name: {
+            kr: "양선직",
+            en: "Sunjik Yang",
+            th: "asdf2",
+            jp: "asdf3",
+          },
           contacts: [
             {
               key: "phone",
@@ -101,8 +144,18 @@ export default {
           ]
         },
         {
-          text: "어머니",
-          name: "유인숙",
+          text: {
+            kr: "어머니",
+            en: "Mother",
+            th: "asdf",
+            jp: "asdf",
+          },
+          name: {
+            kr: "유인숙",
+            en: "Insook Yu",
+            th: "asdf2",
+            jp: "asdf3",
+          },
           contacts: [
             {
               key: "phone",
@@ -115,10 +168,24 @@ export default {
           ]
         },
       ],
+      brideParentsTxt: {
+        kr: "신부측 혼주",
+        en: "Parents of the Bride"
+      },
       brideParentsList: [
         {
-          text: "아버지",
-          name: "세라오쏨퐁",
+          text: {
+            kr: "아버지",
+            en: "Father",
+            th: "asdf",
+            jp: "asdf",
+          },
+          name: {
+            kr: "세라오쏨퐁",
+            en: "asdf1",
+            th: "asdf2",
+            jp: "asdf3",
+          },
           contacts: [
             {
               key: "phone",
@@ -131,8 +198,18 @@ export default {
           ]
         },
         {
-          text: "어머니",
-          name: "캄푸쏨분",
+          text: {
+            kr: "어머니",
+            en: "Mother",
+            th: "asdf",
+            jp: "asdf",
+          },
+          name: {
+            kr: "캄푸쏨분",
+            en: "asdf1",
+            th: "asdf2",
+            jp: "asdf3",
+          },
           contacts: [
             {
               key: "phone",
@@ -151,6 +228,16 @@ export default {
     toggleParentsContact() {
       this.showMinorContact = !this.showMinorContact;
     },
+  },
+  computed: {
+    lang() {
+      var langOptions = ["kr", "en", "th", "jp"];
+      var langQuery = this.$route.query.lang;
+      if (!langOptions.includes(langQuery)) {
+        langQuery = 'kr'
+      }
+      return langQuery
+    }
   },
 };
 </script>
