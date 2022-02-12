@@ -1,5 +1,5 @@
 <template>
-  <div class="account-container">
+  <div class="container">
     <h2>마음 보내실 곳</h2>
 
     <!-- <div class="account-box"> -->
