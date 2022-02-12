@@ -62,12 +62,4 @@ h3{
   font-size: 18px;
   color: #231F20;
 }
-
-.hidden {
-  visibility: hidden;
-}
-
-.visible {
-  visibility: visible;
-}
 </style>

@@ -50,7 +50,7 @@
 
     <div id="desc">
       <h3>{{ weddingHall.name[lang] }}</h3>
-      <p>{{ weddingHall.location[lang] }}</p>
+      <pre>{{ weddingHall.location[lang] }}</pre>
       <a :href="`tel:${weddingHall.phone[lang]}`">
         <img class="material-icons" src="../assets/icon/icon_phone.svg" />
         <span class="material-icons">{{ weddingHall.phone[lang] }}</span>
@@ -91,11 +91,15 @@ export default {
       markerPosition: [36.77293976171279, 127.64764485594283],
       naverBtnTxt: {
         kr: "네이버 지도",
-        en: "Naver Map"
+        en: "Naver Map",
+        th: "Naver Map",
+        jp: "ネイバーマップ"
       },
       kakaoBtnTxt: {
         kr: "카카오 지도",
-        en: "Kakao Map"
+        en: "Kakao Map",
+        th: "Kakao Map",
+        jp: "カカオマップ",
       },
       naverLink: "http://naver.me/5mYh9PwT",
       kakaoLink: "https://place.map.kakao.com/17702466",
@@ -103,10 +107,17 @@ export default {
         name: {
           kr: "숲속웨딩공원",
           en: "Forest Wedding Park",
+          th: "Forest Wedding Park",
+          jp: "Forest Wedding Park",
         },
         location: {
           kr: "충북 괴산군 청안면 청안읍내로1길 81-15",
-          en: "81-15, Cheonganeumnae-ro 1-gil, Cheongan-myeon, Goesan-gun, Chungcheongbuk-do",
+          en: `81-15, Cheonganeumnae-ro 1-gil, Cheongan-myeon,
+Goesan-gun, Chungcheongbuk-do`,
+          th: `81-15, Cheonganeumnae-ro 1-gil, Cheongan-myeon,
+Goesan-gun, Chungcheongbuk-do`,
+          jp: `81-15, Cheonganeumnae-ro 1-gil, Cheongan-myeon,
+Goesan-gun, Chungcheongbuk-do`,
         },
         phone: {
           kr: "043-838-1919",
@@ -118,6 +129,8 @@ export default {
       rentalBusBtnTxt: {
         kr: "하객버스 안내",
         en: "Rental Bus Info.",
+        th: "",
+        jp: "貸切バスのご案内",
       }
     }
   },

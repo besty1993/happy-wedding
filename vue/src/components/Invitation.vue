@@ -25,6 +25,9 @@ export default {
 소중한 여러분들을 초대합니다.`,
         en: `Happy Wedding
 O.M.G!!`,
+        th: "",
+        jp: `asdfghjkl
+        `,
       }
     };
   },
