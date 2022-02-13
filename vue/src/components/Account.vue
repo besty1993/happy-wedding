@@ -136,9 +136,12 @@ export default {
   computed: {
   },
   mounted() {
-    if (this.$route.query.lang !== "kr") {
-      this.showAccountByLang = false;
-    }
+    // if (this.$route.query.lang === "kr") {
+    //   this.showAccountByLang = true;
+    // }
+    // else {
+    //   this.showAccountByLang = false;
+    // }
   },
 };
 </script>

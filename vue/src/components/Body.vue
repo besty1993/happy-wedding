@@ -32,6 +32,6 @@ export default {
 
 <style>
 .container {
-  margin: 200px 0;
+  margin: 168px 0;
 }
 </style>

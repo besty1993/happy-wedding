@@ -38,22 +38,29 @@
       </vs-col>
     </vs-row>
 
-    <div id="outer">
-      <a class="btn map-btn" :href="naverLink" target="_blank">
-        <img :src="iconPath('icon_map_noline.svg')" />{{naverBtnTxt[lang]}}
-      </a>
-
-      <a class="btn map-btn" :href="kakaoLink" target="_blank">
-        <img :src="iconPath('icon_map_noline.svg')" />{{kakaoBtnTxt[lang]}}
-      </a>
-    </div>
-
     <div id="desc">
       <h3>{{ weddingHall.name[lang] }}</h3>
       <pre>{{ weddingHall.location[lang] }}</pre>
       <a :href="`tel:${weddingHall.phone[lang]}`">
         <img class="material-icons" src="../assets/icon/icon_phone.svg" />
         <span class="material-icons">{{ weddingHall.phone[lang] }}</span>
+      </a>
+    </div>
+
+    <svg class="ic-line" width="1" height="176" viewBox="0 0 1 176" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0.5" y1="2.18557e-08" x2="0.499992" y2="176" stroke="#CBCBCB"/>
+    </svg>
+
+    
+
+    
+    <div id="outer">
+      <a class="btn__small" :href="naverLink" target="_blank">
+        <img :src="iconPath('icon_map_noline.svg')" />{{naverBtnTxt[lang]}}
+      </a>
+
+      <a class="btn__small" :href="kakaoLink" target="_blank">
+        <img :src="iconPath('icon_map_noline.svg')" />{{kakaoBtnTxt[lang]}}
       </a>
     </div>
 
@@ -171,13 +178,16 @@ Goesan-gun, Chungcheongbuk-do`,
 #outer {
   width: 100%;
   text-align: center;
+  vertical-align: middle;
 }
 
-.map-btn {
-  margin: 32px 12px 32px 12px;
+.btn__small {
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+  margin: 24px 18px 24px 18px;
   line-height: auto;
-  width: 150px;
-  height: 36px;
+  padding: 4px 16px 4px 16px;
+  text-align: center;
   border: 2px solid;
   border-radius: 20px;
   border-color: #88b077;
@@ -186,17 +196,19 @@ Goesan-gun, Chungcheongbuk-do`,
   display: inline-block;
 }
 
-.btn {
-  cursor: pointer;
-  transition: all 0.5s ease 0s;
-}
-
-.btn img {
+.btn__small img {
+  border: 2px #000;
+  vertical-align: baseline;
   margin-right: 8px;
-  width: 16px;
-  height: 16px;
+  width: auto;
+  height: auto;
 }
 
+.ic-line{
+
+  float: right;
+  margin-right: 50%;
+}
 a img {
   width: 24px;
   height: 24px;
@@ -206,12 +218,12 @@ a span:hover {
   color: #88b077;
 }
 
-.btn:hover {
+.btn__small:hover {
   background: rgba(136, 176, 119, 0.1);
   color: #88b077;
 }
 
-.btn:hover img {
+.btn__small:hover img {
   transition: 0ms;
   transition-delay: 0ms;
   filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(349deg) brightness(96%)
