@@ -55,7 +55,7 @@ h2 {
   text-align: center;
   margin: 50px;
 
-  color: #51250a;
+  color: #51250a; 
 }
 
 h3{
