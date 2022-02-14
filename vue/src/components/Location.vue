@@ -47,9 +47,9 @@
       </a>
     </div>
 
-    <svg class="ic-line" width="1" height="176" viewBox="0 0 1 176" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- <svg class="ic-line" width="1" height="176" viewBox="0 0 1 176" fill="none" xmlns="http://www.w3.org/2000/svg">
     <line x1="0.5" y1="2.18557e-08" x2="0.499992" y2="176" stroke="#CBCBCB"/>
-    </svg>
+    </svg> -->
 
     
 
@@ -204,11 +204,11 @@ Goesan-gun, Chungcheongbuk-do`,
   height: auto;
 }
 
-.ic-line{
+/* .ic-line{
 
   float: right;
   margin-right: 50%;
-}
+} */
 a img {
   width: 24px;
   height: 24px;
