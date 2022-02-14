@@ -14,6 +14,7 @@ mv -f vue/dist/* docs/
 
 # if you are deploying to a custom domain
 echo 'www.suneeandchangeun-he.art' > CNAME
+echo 'www.suneeandchangeun-he.art' > docs/CNAME
 
 git init
 git add -A
