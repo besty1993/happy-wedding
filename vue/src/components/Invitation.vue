@@ -31,8 +31,7 @@ export default {
 혹 예식에 참석하지 못하시더라도
 새로운 여정을 시작하고자 하는 저희를
 축복해주시면 감사하겠습니다.`,
-        en: `Happy Wedding
-O.M.G!!`,
+        en: `https://www.brides.com/story/guide-to-wedding-invitation-wording`,
         th: "",
         jp: `asdfghjkl
         `,
