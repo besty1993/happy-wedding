@@ -4,8 +4,8 @@
       <form action="" class="lang__form" id="lang__form">
         <i class="ic-globe"></i>
         <select name="langu-select" id="lang-select">
-          <option lang="kr" value="kr">Korean</option>
-          <option lang="en" value="en" selected>English</option>
+          <option lang="kr" value="kr" selected>Korean</option>
+          <option lang="en" value="en">English</option>
           <option lang="th" value="th">Thai</option>
           <option lang="jp" value="jp">Japanese&nbsp;</option>
         </select>
