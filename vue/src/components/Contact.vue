@@ -15,7 +15,38 @@
     />
 
     <div v-show="showMinorContact">
-      <ParentsContact
+      <vs-row
+        vs-justify="center"
+        vs-align="center"
+      >
+        <vs-col
+          vs-justify="center"
+          vs-align="center"
+          vs-lg="4"
+          vs-sm="4"
+          vs-xs="8"
+        >
+          <ParentsContact
+            v-model="lang"
+            :text="groomParentsTxt[lang]"
+            :parentsList="groomParentsList"
+          />
+        </vs-col>
+        <vs-col
+          vs-justify="center"
+          vs-align="center"
+          vs-lg="4"
+          vs-sm="4"
+          vs-xs="8"
+        >
+          <ParentsContact
+            v-model="lang"
+            :text="brideParentsTxt[lang]"
+            :parentsList="brideParentsList"
+          />
+        </vs-col>
+      </vs-row>
+      <!-- <ParentsContact
           v-model="lang"
           :text="groomParentsTxt[lang]"
           :parentsList="groomParentsList"
@@ -24,7 +55,7 @@
           v-model="lang"
           :text="brideParentsTxt[lang]"
           :parentsList="brideParentsList"
-      />
+      /> -->
     </div>
   </div>
 </template>

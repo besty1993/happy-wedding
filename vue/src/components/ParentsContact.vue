@@ -29,7 +29,7 @@ h3 {
   /* width: fit-content; */
 }
 .parents-contact-container {
-  width: 40%;
+  /* width: 40%; */
   /* margin: 0 10%; */
   display: inline-block;
 }
