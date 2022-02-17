@@ -4,10 +4,10 @@
       <form action="" class="lang__form" id="lang__form">
         <i class="ic-globe"></i>
         <select name="langu-select" @change="onChange($event)" id="lang-select">
-          <option lang="kr" value="kr" selected>Korean</option>
+          <option lang="kr" value="kr">Korean</option>
           <option lang="en" value="en">English</option>
           <option lang="th" value="th">Thai</option>
-          <option lang="jp" value="jp">Japanese&nbsp;</option>
+          <option lang="jp" value="jp">Japanese</option>
         </select>
       </form>
     </div>
@@ -23,8 +23,29 @@ export default {
       // Select Language
       const lang = event.target.value;
       this.$router.push({ path: '/', query: { lang: lang }})
-    }
-  }
+    },
+    lang() {
+      // Parse query : https://stackoverflow.com/questions/35914069/how-can-i-get-query-parameters-from-a-url-in-vue-js
+      let uri = window.location.search.substring(1); 
+      let params = new URLSearchParams(uri);
+      var langQuery = params.get("lang");
+
+      const langOptions = ["kr", "en", "th", "jp"];
+      
+      if (!langOptions.includes(langQuery)) {
+        langQuery = 'kr'
+      }
+
+      return langQuery
+    },
+    initSelector() {
+      const currentLanguage = this.lang()
+      document.getElementById('lang-select').value=currentLanguage;
+    },
+  },
+  mounted() {
+    this.initSelector();
+  },
 };
 </script>
 
