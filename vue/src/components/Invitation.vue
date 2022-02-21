@@ -31,32 +31,27 @@ export default {
 혹 예식에 참석하지 못하시더라도
 새로운 여정을 시작하고자 하는 저희를
 축복해주시면 감사하겠습니다.`,
-        en: `Dear family and friends,
+        en: `When you realise you want to
+spend the rest of your life with someone, 
+you want it to start as soon as possible.
 
-We hope you and yours are healthy and safe during this time,
-and we appreciate all the love and support we’ve received from each of you.
-
-Although the COVID-19 crisis has created much uncertainty,
-as of now, we will be proceeding with our wedding on April 10, 2022.
-
-We understand that the situation is in constant flux,
-but we decided to proceed the wedding,
-since we cannot estimate when the COVID-19 will be over.
-We will keep you informed if that should change, however,
-so please continue to check out our website for updates.
-
+Taking their first step to eternity,
+we would love to have you join us
+as we begin our Happily Ever After.
+-
 To our international guests,
-we understand it may be difficult or even impossible to travel.
-Still, we hope you will be able to join us virtually.
+We do understand what is happening in the world.
+Also you health, safety and comfort is our highest priority.
+Sadly, we are unable to share this day in person
+with all of our friends and family.
+We would love for you to join us virtually and
+witness the celebration of our marriage.
 
-Please also feel free to reach out to us directly with any questions or concerns.
+We hope that you'll celebrate
+in your heart with best wishes from afar,
+please stay well and know that you are always in our thoughts.
 
-Thank you for your patience and understanding,
-and we cannot wait to be together with you in person again come spring!
-
-Love,
-
-Changeun and Sunee`,
+Changeun and Kate(Sunee)`,
         th: "",
         jp: `謹啓
 
@@ -112,4 +107,4 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
-</style>
+</style> 
