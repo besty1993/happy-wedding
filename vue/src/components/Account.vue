@@ -5,9 +5,6 @@
     id="account-container"
   >
     <h2>마음 보내실 곳</h2>
-
-    <!-- <div class="account-box"> -->
-
     <vs-row vs-justify="center" vs-align="center">
       <vs-col
         vs-lg="6"
@@ -17,70 +14,82 @@
         vs-align="center"
         class="account-box"
       >
-        <vs-row vs-justify="center" vs-align="center">
-          <vs-col
+        <!-- Korean Account -->
+        <div v-show="lang==='kr'">
+          <vs-row vs-justify="center" vs-align="center">
+            <vs-col
+              vs-justify="center"
+              vs-align="center"
+              vs-lg="10"
+              vs-sm="10"
+              vs-xs="10"
+              class="account-unit"
+            >
+              <Button
+                class="btn"
+                color="primary"
+                type="border"
+                iconsvg="fa-caret-down.svg"
+                text="신랑측 계좌번호"
+                @btn-click="toggleGroomAccount"
+              />
+              <div v-show="showGroomAccount">
+                <AccountItem
+                  v-for="(account, idx) in groom"
+                  :key="idx"
+                  :text="account.type"
+                  :name="account.name"
+                  :bank="account.bank"
+                  :account="account.account"
+                />
+              </div>
+            </vs-col>
+          </vs-row>
+
+          <vs-row
+            vs-lg="6"
+            vs-sm="8"
+            vs-xs="10"
             vs-justify="center"
             vs-align="center"
-            vs-lg="10"
-            vs-sm="10"
-            vs-xs="10"
-            class="account-unit"
           >
-            <Button
-              class="btn"
-              color="primary"
-              type="border"
-              iconsvg="fa-caret-down.svg"
-              text="신랑측 계좌번호"
-              @btn-click="toggleGroomAccount"
-            />
-            <div v-show="showGroomAccount">
-              <AccountItem
-                v-for="(account, idx) in groom"
-                :key="idx"
-                :text="account.type"
-                :name="account.name"
-                :bank="account.bank"
-                :account="account.account"
+            <vs-col
+              vs-justify="center"
+              vs-lg="10"
+              vs-sm="10"
+              vs-xs="10"
+              class="account-unit"
+            >
+              <Button
+                class="btn"
+                color="primary"
+                type="border"
+                iconsvg="fa-caret-down.svg"
+                text="신부측 계좌번호"
+                @btn-click="toggleBrideAccount"
               />
-            </div>
-          </vs-col>
-        </vs-row>
+              <div v-show="showBrideAccount">
+                <AccountItem
+                  v-for="(account, idx) in bride"
+                  :key="idx"
+                  :text="account.type"
+                  :name="account.name"
+                  :bank="account.bank"
+                  :account="account.account"
+                />
+              </div>
+            </vs-col>
+          </vs-row>
+        </div>
 
-        <vs-row
-          vs-lg="6"
-          vs-sm="8"
-          vs-xs="10"
-          vs-justify="center"
-          vs-align="center"
-        >
-          <vs-col
-            vs-justify="center"
-            vs-lg="10"
-            vs-sm="10"
-            vs-xs="10"
-            class="account-unit"
-          >
-            <Button
-              class="btn"
-              color="primary"
-              type="border"
-              iconsvg="fa-caret-down.svg"
-              text="신랑측 계좌번호"
-              @btn-click="toggleBrideAccount"
-            />
-            <div v-show="showBrideAccount">
-              <AccountItem
-                v-for="(account, idx) in bride"
-                :key="idx"
-                :text="account.type"
-                :name="account.name"
-                :bank="account.bank"
-                :account="account.account"
-              />
-            </div>
-          </vs-col>
-        </vs-row>
+        <!-- English Gifts -->
+        <div v-show="lang==='en'">
+        </div>
+
+        <!-- Thai Account -->
+        <div v-show="lang==='th'">
+        </div>
+        
       </vs-col>
     </vs-row>
   </div>
