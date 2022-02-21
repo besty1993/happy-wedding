@@ -27,6 +27,22 @@ export default {
   text-align: center;
 }
 
+p {
+  width: fit-content;
+  display: inline-block;
+  vertical-align: center;
+}
+
+.text {
+  font-size: 18px;
+}
+
+#reference{
+  font-size: 16px;
+}
+
+
+/* Over 800px screen */
 #double_quote_1 {
   padding-bottom: 25px;
   padding-right: 10px;
@@ -37,24 +53,28 @@ export default {
   padding-left: 10px;
   vertical-align: top;
 }
-
-p {
-  width: fit-content;
-  display: inline-block;
-  vertical-align: center;
-}
-
 .separator {
   display: block;
   margin: 5px auto 30px auto ;
 }
 
-.text {
-  font-size: 18px;
+/* Less than 800px screen */
+@media screen and (max-width: 800px) {
+  #double_quote_1 {
+    padding: 0px;
+    display: block;
+    margin: 20px auto;
+  }
+  #double_quote_2 {
+    padding: 0px;
+    display: block;
+    margin: 20px auto;
+  }
+  .separator {
+    display: block;
+    margin: 50px auto 50px auto ;
+  }
 }
 
-#reference{
-  font-size: 16px;
-}
 </style>
 
