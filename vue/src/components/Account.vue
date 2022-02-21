@@ -1,8 +1,8 @@
 <template>
   <div 
-      v-show="showAccountByLang"
-      class="container"
-      id="account-container"
+    v-show="lang==='kr'"
+    class="container"
+    id="account-container"
   >
     <h2>마음 보내실 곳</h2>
 
@@ -98,7 +98,6 @@ export default {
   },
   data() {
     return {
-      showAccountByLang: true,
       showGroomAccount: false,
       showBrideAccount: false,
       groom: [
@@ -134,14 +133,14 @@ export default {
     }
   },
   computed: {
-  },
-  mounted() {
-    // if (this.$route.query.lang === "kr") {
-    //   this.showAccountByLang = true;
-    // }
-    // else {
-    //   this.showAccountByLang = false;
-    // }
+    lang() {
+      var langOptions = ["kr", "en", "th", "jp"];
+      var langQuery = this.$route.query.lang;
+      if (!langOptions.includes(langQuery)) {
+        langQuery = 'kr'
+      }
+      return langQuery
+    },
   },
 };
 </script>
