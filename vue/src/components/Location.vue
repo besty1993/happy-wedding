@@ -191,13 +191,19 @@ Goesan-gun, Chungcheongbuk-do`,
   },
   computed: {
     lang() {
-      var langOptions = ["kr", "en", "th", "jp"];
-      var langQuery = this.$route.query.lang;
+      // Parse query : https://stackoverflow.com/questions/35914069/how-can-i-get-query-parameters-from-a-url-in-vue-js
+      let uri = window.location.search.substring(1); 
+      let params = new URLSearchParams(uri);
+      var langQuery = params.get("lang");
+
+      const langOptions = ["kr", "en", "th", "jp"];
+      
       if (!langOptions.includes(langQuery)) {
         langQuery = 'kr'
       }
+
       return langQuery
-    }
+    },
   },
 };
 </script>
