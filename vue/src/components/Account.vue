@@ -161,3 +161,9 @@ export default {
   margin: 30px 0;
 }
 </style>
+
+<style scoped>
+h2 {
+  font-size: 50px;
+}
+</style>
