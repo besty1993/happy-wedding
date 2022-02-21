@@ -13,49 +13,50 @@
       :text="btnTxt[lang]"
       @btn-click="toggleParentsContact"
     />
-
-    <div v-show="showMinorContact">
-      <vs-row
-        vs-justify="center"
-        vs-align="center"
-      >
-        <vs-col
+    <div v-show="showMinorContactBtn">
+      <div v-show="showMinorContact">
+        <vs-row
           vs-justify="center"
           vs-align="center"
-          vs-lg="4"
-          vs-sm="4"
-          vs-xs="8"
         >
-          <ParentsContact
+          <vs-col
+            vs-justify="center"
+            vs-align="center"
+            vs-lg="4"
+            vs-sm="4"
+            vs-xs="8"
+          >
+            <ParentsContact
+              v-model="lang"
+              :text="groomParentsTxt[lang]"
+              :parentsList="groomParentsList"
+            />
+          </vs-col>
+          <vs-col
+            vs-justify="center"
+            vs-align="center"
+            vs-lg="4"
+            vs-sm="4"
+            vs-xs="8"
+          >
+            <ParentsContact
+              v-model="lang"
+              :text="brideParentsTxt[lang]"
+              :parentsList="brideParentsList"
+            />
+          </vs-col>
+        </vs-row>
+        <!-- <ParentsContact
             v-model="lang"
             :text="groomParentsTxt[lang]"
             :parentsList="groomParentsList"
-          />
-        </vs-col>
-        <vs-col
-          vs-justify="center"
-          vs-align="center"
-          vs-lg="4"
-          vs-sm="4"
-          vs-xs="8"
-        >
-          <ParentsContact
+        />
+        <ParentsContact
             v-model="lang"
             :text="brideParentsTxt[lang]"
             :parentsList="brideParentsList"
-          />
-        </vs-col>
-      </vs-row>
-      <!-- <ParentsContact
-          v-model="lang"
-          :text="groomParentsTxt[lang]"
-          :parentsList="groomParentsList"
-      />
-      <ParentsContact
-          v-model="lang"
-          :text="brideParentsTxt[lang]"
-          :parentsList="brideParentsList"
-      /> -->
+        /> -->
+      </div>
     </div>
   </div>
 </template>
@@ -74,19 +75,20 @@ export default {
   },
   data() {
     return {
+      showMinorContactBtn: true,
       showMinorContact: false,
       groomObj: {
         text: {
           kr: "신랑에게 연락하기",
           en: "Contact the Groom",
           th: "asdf",
-          jp: "asdf",
+          jp: "新郎に連絡",
         },
         name: {
           kr: "양창은",
           en: "Changeun Yang",
           th: "asdf2",
-          jp: "asdf3",
+          jp: "ヤン チャンウン",
         },
         contacts: [
           {
@@ -112,13 +114,13 @@ export default {
           kr: "신부에게 연락하기",
           en: "Contact the Bride",
           th: "asdf",
-          jp: "asdf",
+          jp: "新婦に連絡",
         },
         name: {
           kr: "세라오스니",
           en: "Sunee Sae-lao",
           th: "asdf2",
-          jp: "asdf3",
+          jp: "セ-ラオ スニ-",
         },
         contacts: [
           {
@@ -143,11 +145,12 @@ export default {
         kr: "혼주에게 연락하기",
         en: "Contact Parents",
         th: "asdf",
-        jp: "asdf"
+        jp: "ご両親に連絡"
       },
       groomParentsTxt: {
         kr: "신랑측 혼주",
-        en: "Parents of the Groom"
+        en: "Parents of the Groom",
+        jp: "新郎のご両親",
       },
       groomParentsList: [
         {
@@ -155,7 +158,7 @@ export default {
             kr: "아버지",
             en: "Father",
             th: "asdf",
-            jp: "asdf",
+            jp: "父親",
           },
           name: {
             kr: "양선직",
@@ -179,7 +182,7 @@ export default {
             kr: "어머니",
             en: "Mother",
             th: "asdf",
-            jp: "asdf",
+            jp: "母親",
           },
           name: {
             kr: "유인숙",
@@ -201,7 +204,8 @@ export default {
       ],
       brideParentsTxt: {
         kr: "신부측 혼주",
-        en: "Parents of the Bride"
+        en: "Parents of the Bride",
+        jp: "新婦のご両親",
       },
       brideParentsList: [
         {
@@ -209,7 +213,7 @@ export default {
             kr: "아버지",
             en: "Father",
             th: "asdf",
-            jp: "asdf",
+            jp: "父親",
           },
           name: {
             kr: "세라오쏨퐁",
@@ -233,7 +237,7 @@ export default {
             kr: "어머니",
             en: "Mother",
             th: "asdf",
-            jp: "asdf",
+            jp: "母親",
           },
           name: {
             kr: "캄푸쏨분",
@@ -257,18 +261,33 @@ export default {
   },
   methods: {
     toggleParentsContact() {
-      this.showMinorContact = !this.showMinorContact;
+      if (this.showMinorContactBtn) {
+        this.showMinorContact = !this.showMinorContact;
+      }
+      else {
+        this.showMinorContact = false;
+      }
     },
   },
   computed: {
     lang() {
-      var langOptions = ["kr", "en", "th", "jp"];
-      var langQuery = this.$route.query.lang;
+      // Parse query : https://stackoverflow.com/questions/35914069/how-can-i-get-query-parameters-from-a-url-in-vue-js
+      let uri = window.location.search.substring(1); 
+      let params = new URLSearchParams(uri);
+      var langQuery = params.get("lang");
+
+      const langOptions = ["kr", "en", "th", "jp"];
+      
       if (!langOptions.includes(langQuery)) {
         langQuery = 'kr'
       }
+
       return langQuery
-    }
+    },
+  },
+  mounted() {
+    const currentLang = this.lang
+    this.showMinorContactBtn = (currentLang==='kr')||(currentLang==='th');
   },
 };
 </script>
