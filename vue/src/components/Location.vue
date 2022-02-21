@@ -64,8 +64,48 @@
       </a>
     </div>
 
+  <div class="bus_wrapper">
+  <h3>하객버스 안내</h3>
+  
+  </div>
 
-    <Button
+    <div>
+      
+      <vs-row
+        vs-align="center"
+        vs-justify="center"
+      >
+        <vs-col
+          vs-justify="center"
+          vs-align="center"
+          vs-lg="2"
+          vs-sm="4"
+          vs-xs="8"
+        >
+          <h3>&#9702; 서울 &#10140; 예식장</h3>
+          <p>시간 : 4월 10일 9:00 AM</p>
+          <p>장소 : 잠실역 4번 출구 방면 롯데월드<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 제타플렉스점 앞</p>
+          
+        </vs-col>
+        <div class="location_margin">
+        <vs-col
+          vs-justify="center"
+          vs-align="center"
+          vs-lg="3"
+          vs-sm="4"
+          vs-xs="8"
+        >
+          <h3>&#9702; 예식장 &#10140; 서울</h3>
+          <p>시간 : 4월 10일 14:00 PM</p>
+          <p>장소 : 숲속웨딩공원 주차장</p>
+          <p><br></p>
+          
+        </vs-col>
+      </vs-row>
+    </div>
+
+
+    <!-- <Button
       v-model= "lang"
       color="primary"
       type="border"
@@ -76,21 +116,21 @@
 
     <div v-show="showBusInfo">
       <BusInfo />
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 import Map from "./Map"
-import Button from "./Button"
-import BusInfo from "./BusInfo"
+// import Button from "./Button"
+// import BusInfo from "./BusInfo"
 
 export default {
   name: "Location",
   components: {
     Map,
-    Button,
-    BusInfo,
+    // Button,
+    // BusInfo,
   },
   data() {
     return {
@@ -136,7 +176,7 @@ Goesan-gun, Chungcheongbuk-do`,
       rentalBusBtnTxt: {
         kr: "하객버스 안내",
         en: "Rental Bus Info.",
-        th: "",
+        th: "ข้อมูลรถรับส่ง",
         jp: "貸切バスのご案内",
       }
     }
@@ -145,9 +185,9 @@ Goesan-gun, Chungcheongbuk-do`,
     iconPath(icon) {
       return require("@/assets/icon/" + icon);
     },
-    toggleBusInfo() {
-      this.showBusInfo = !this.showBusInfo;
-    },
+    // toggleBusInfo() {
+    //   this.showBusInfo = !this.showBusInfo;
+    // },
   },
   computed: {
     lang() {
@@ -276,5 +316,15 @@ span:nth-of-type(5):after {
 span:hover:after {
   width: 100%;
   left: 0;
+}
+
+.bus_wrapper{
+
+  display: inline-block;
+}
+
+.location_margin{
+
+  
 }
 </style>
