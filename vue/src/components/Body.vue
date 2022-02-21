@@ -5,6 +5,8 @@
     <Gallery />
     <Calendar />
     <Location />
+    <Dot />
+    <Quote />
     <Account />
   </div>
 </template>
@@ -15,6 +17,8 @@ import Contact from "./Contact";
 import Gallery from "./Gallery";
 import Calendar from "./Calendar";
 import Location from "./Location";
+import Dot from "./Dot";
+import Quote from "./Quote";
 import Account from "./Account";
 
 export default {
@@ -25,6 +29,8 @@ export default {
     Gallery,
     Calendar,
     Location,
+    Dot,
+    Quote,
     Account,
   },
 };
