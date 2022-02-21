@@ -4,16 +4,16 @@
     <ContactItem :data="groomObj" />
     <ContactItem :data="brideObj" />
 
-    <Button
-      v-model="lang"
-      class="btn"
-      color="primary"
-      type="border"
-      iconsvg="fa-caret-down.svg"
-      :text="btnTxt[lang]"
-      @btn-click="toggleParentsContact"
-    />
-    <div v-show="showMinorContactBtn">
+    <div v-show="(lang==='kr')||(lang==='th')">
+      <Button
+        v-model="lang"
+        class="btn"
+        color="primary"
+        type="border"
+        iconsvg="fa-caret-down.svg"
+        :text="btnTxt[lang]"
+        @btn-click="toggleParentsContact"
+      />
       <div v-show="showMinorContact">
         <vs-row
           vs-justify="center"
