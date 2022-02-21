@@ -17,8 +17,9 @@ export default {
 
 footer { 
   display: inline-block; 
-  background-image: url("../assets/img/footer.png");
-  background-repeat: no-repeat;
+  background: 
+    url("../assets/img/footer.png") 0 100% repeat-x,
+    url("../assets/img/footer.png") 75px 100% repeat-x;
   background-position: bottom;
   width: 100%;
   height: auto;

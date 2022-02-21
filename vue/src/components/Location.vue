@@ -65,44 +65,46 @@
     </div>
 
   <div class="bus_wrapper">
-  <h3>하객버스 안내</h3>
-  
+    <h3>하객버스 안내</h3>
   </div>
 
-    <div>
-      
-      <vs-row
-        vs-align="center"
+    <vs-row
+      vs-align="center"
+      vs-justify="center"
+    >
+      <vs-col
         vs-justify="center"
+        vs-align="center"
+        vs-lg="4"
+        vs-sm="4"
+        vs-xs="8"
       >
-        <vs-col
-          vs-justify="center"
-          vs-align="center"
-          vs-lg="2"
-          vs-sm="4"
-          vs-xs="8"
-        >
-          <h3>&#9702; 서울 &#10140; 예식장</h3>
-          <p>시간 : 4월 10일 9:00 AM</p>
-          <p>장소 : 잠실역 4번 출구 방면 롯데월드<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 제타플렉스점 앞</p>
-          
-        </vs-col>
-        <div class="location_margin">
-        <vs-col
-          vs-justify="center"
-          vs-align="center"
-          vs-lg="3"
-          vs-sm="4"
-          vs-xs="8"
-        >
-          <h3>&#9702; 예식장 &#10140; 서울</h3>
-          <p>시간 : 4월 10일 14:00 PM</p>
-          <p>장소 : 숲속웨딩공원 주차장</p>
-          <p><br></p>
-          
-        </vs-col>
-      </vs-row>
-    </div>
+        <h3>&#9702; 서울 &#10140; 예식장</h3>
+        <p>시간 : 4월 10일 9:00 AM</p>
+        <p>장소 : 잠실역 4번 출구 방면 롯데월드 제타플렉스점 앞</p>
+        <p><br></p>
+        
+      </vs-col>
+    </vs-row>
+
+    <vs-row
+      vs-align="center"
+      vs-justify="center"
+    >
+      <vs-col
+        vs-justify="center"
+        vs-align="center"
+        vs-lg="4"
+        vs-sm="4"
+        vs-xs="8"
+      >
+        <h3>&#9702; 예식장 &#10140; 서울</h3>
+        <p>시간 : 4월 10일 14:00 PM</p>
+        <p>장소 : 숲속웨딩공원 주차장</p>
+        <p><br></p>
+        
+      </vs-col>
+    </vs-row>
 
 
     <!-- <Button
@@ -191,25 +193,23 @@ Goesan-gun, Chungcheongbuk-do`,
   },
   computed: {
     lang() {
-      // Parse query : https://stackoverflow.com/questions/35914069/how-can-i-get-query-parameters-from-a-url-in-vue-js
-      let uri = window.location.search.substring(1); 
-      let params = new URLSearchParams(uri);
-      var langQuery = params.get("lang");
-
-      const langOptions = ["kr", "en", "th", "jp"];
-      
+      var langOptions = ["kr", "en", "th", "jp"];
+      var langQuery = this.$route.query.lang;
       if (!langOptions.includes(langQuery)) {
         langQuery = 'kr'
       }
-
       return langQuery
-    },
+    }
   },
 };
 </script>
 
 
 <style scoped>
+
+h3, p{
+  text-align: center;
+}
 .content {
   display: flex;
   flex-wrap: wrap;
@@ -325,12 +325,6 @@ span:hover:after {
 }
 
 .bus_wrapper{
-
-  display: inline-block;
-}
-
-.location_margin{
-
-  
+  margin-bottom: 16px;
 }
 </style>
