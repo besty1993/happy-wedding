@@ -4,16 +4,16 @@
     <ContactItem :data="groomObj" />
     <ContactItem :data="brideObj" />
 
-    <Button
-      v-model="lang"
-      class="btn"
-      color="primary"
-      type="border"
-      iconsvg="fa-caret-down.svg"
-      :text="btnTxt[lang]"
-      @btn-click="toggleParentsContact"
-    />
-    <div v-show="showMinorContactBtn">
+    <div v-show="(lang==='kr')||(lang==='th')">
+      <Button
+        v-model="lang"
+        class="btn"
+        color="primary"
+        type="border"
+        iconsvg="fa-caret-down.svg"
+        :text="btnTxt[lang]"
+        @btn-click="toggleParentsContact"
+      />
       <div v-show="showMinorContact">
         <vs-row
           vs-justify="center"
@@ -271,19 +271,13 @@ export default {
   },
   computed: {
     lang() {
-      // Parse query : https://stackoverflow.com/questions/35914069/how-can-i-get-query-parameters-from-a-url-in-vue-js
-      let uri = window.location.search.substring(1); 
-      let params = new URLSearchParams(uri);
-      var langQuery = params.get("lang");
-
-      const langOptions = ["kr", "en", "th", "jp"];
-      
+      var langOptions = ["kr", "en", "th", "jp"];
+      var langQuery = this.$route.query.lang;
       if (!langOptions.includes(langQuery)) {
         langQuery = 'kr'
       }
-
       return langQuery
-    },
+    }
   },
   mounted() {
     const currentLang = this.lang
