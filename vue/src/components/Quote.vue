@@ -2,7 +2,12 @@
   <div class="container">
     <span>
       <img id="double_quote_1" src="@/assets/icon/double_quote_1.svg" />
-      <p class="text">{{quote}}</p>
+      <p 
+        v-for="(quote, idx) in quotes"
+        :key="idx"
+        class="text"
+      >{{quote}}
+      </p>
       <img id="double_quote_2" src="@/assets/icon/double_quote_2.svg" />
     </span>
     <img class="separator" src="@/assets/icon/quote_separator.svg" />
@@ -15,7 +20,10 @@ export default {
   name: "Quote",
   data() {
     return {
-      quote: "How lucky I am to have something that makes saying goodbye so hard.",
+      quotes: [
+        "How lucky I am to have something ",
+        "that makes saying goodbye so hard."
+      ],
       reference: "A.A. Milne, 'Winnie The Pooh.’"
     }
   }
@@ -35,6 +43,7 @@ p {
 
 .text {
   font-size: 18px;
+  margin: 0 2.5px;
 }
 
 #reference{
