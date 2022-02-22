@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div id="header" class="kr_header">
     <div class="lang-menu">
       <form action="" class="lang__form" id="lang__form">
         <i class="ic-globe"></i>
@@ -22,57 +22,116 @@ export default {
     onChange(event) {
       // Select Language
       const lang = event.target.value;
+      // this.changeHeader(lang);
       this.$router.push({ path: '/', query: { lang: lang }})
     },
-    lang() {
-      // Parse query : https://stackoverflow.com/questions/35914069/how-can-i-get-query-parameters-from-a-url-in-vue-js
-      let uri = window.location.search.substring(1); 
-      let params = new URLSearchParams(uri);
-      var langQuery = params.get("lang");
+    // lang() {
+    //   var langOptions = ["kr", "en", "th", "jp"];
+    //   var langQuery = this.$route.query.lang;
+    //   if (!langOptions.includes(langQuery)) {
+    //     langQuery = 'kr'
+    //   }
+    //   return langQuery
+    // },
+    // lang() {
+    //   // Parse query : https://stackoverflow.com/questions/35914069/how-can-i-get-query-parameters-from-a-url-in-vue-js
+    //   let uri = window.location.search.substring(1); 
+    //   let params = new URLSearchParams(uri);
+    //   var langQuery = params.get("lang");
 
-      const langOptions = ["kr", "en", "th", "jp"];
+    //   const langOptions = ["kr", "en", "th", "jp"];
       
+    //   if (!langOptions.includes(langQuery)) {
+    //     langQuery = 'kr'
+    //   }
+
+    //   return langQuery
+    // },
+    initSelector() {
+      const currentLanguage = this.lang
+      document.getElementById('lang-select').value=currentLanguage;
+    },
+    changeHeader(lang) {
+      // Header change by language
+      // const currentLanguage = this.lang
+      var headerElement = document.getElementById("header");
+
+      console.log(this.lang, "asdfasdf");
+
+      if (lang === 'kr') {
+        headerElement.classList.add('kr_header')
+        headerElement.classList.remove('en_header')
+      }
+      else {
+        headerElement.classList.add('en_header')
+        headerElement.classList.remove('kr_header')
+      }
+    }
+  },
+  computed: {
+    lang() {
+      var langOptions = ["kr", "en", "th", "jp"];
+      var langQuery = this.$route.query.lang;
       if (!langOptions.includes(langQuery)) {
         langQuery = 'kr'
       }
-
       return langQuery
-    },
-    initSelector() {
-      const currentLanguage = this.lang()
-      document.getElementById('lang-select').value=currentLanguage;
     },
   },
   mounted() {
     this.initSelector();
+    this.changeHeader(this.lang);
   },
+  watch: {
+    '$route' () {
+      this.initSelector();
+      this.changeHeader(this.lang);
+    }
+  }
 };
 </script>
 
 <style scoped>
-.header {
+#header {
   max-width: 100%;
   height: 100vh;
-  background-image: url("../assets/img/header_fhd.jpg");
   background-size: auto 100%;
   background-position: center center;
   background-repeat: no-repeat;
 }
+.kr_header {
+  background-image: url("../assets/img/header_fhd.jpg");
+}
+.en_header {
+  background-image: url("../assets/img/header_fhd_EN.jpg");
+}
 
 @media screen and (min-width: 1070px) {
-  .header {
+  #header {
     background-size: 100% auto;
     background-position: center top;
     height: 59vw;
   }
+  .kr_header {
+    background-image: url("../assets/img/header_fhd.jpg");
+  }
+  .en_header {
+    background-image: url("../assets/img/header_fhd_EN.jpg");
+  }
 }
 
 @media screen and (max-width: 500px) {
-  .header {
+  #header {
     background-size: 100% auto;
     background-image: url("../assets/img/header_mobile.jpg");
     background-position: center top;
     height: 220vw;
+  }
+  .kr_header {
+    background-image: url("../assets/img/header_mobile.jpg");
+  }
+  .en_header {
+    background-image: url("../assets/img/header_mobile_EN.jpg");
   }
 }
 </style>
