@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h2>Invitation</h2>
-    <pre>{{ text[lang] }}</pre>
+    <pre :style="'font-size:'+text_font_size[lang]">{{ text[lang] }}</pre>
 
     <img src="../assets/icon/invitation_flower.svg" />
   </div>
@@ -12,6 +12,12 @@ export default {
   name: "Invitation",
   data() {
     return {
+      text_font_size: {
+        'kr': '15px',
+        'th': '13px',
+        'en': '14px',
+        'jp': '14px',
+      },
       text: {
         kr: `서로 다른 두 사람의 만남이었지만
 같이했던 시간들은 서로가 서로에게
@@ -41,7 +47,7 @@ as we begin our Happily Ever After.
 -
 To our international guests,
 We do understand what is happening in the world.
-Also you health, safety and comfort is our highest priority.
+Also your safety and comfort is our highest priority.
 Sadly, we are unable to share this day in person
 with all of our friends and family.
 We would love for you to join us virtually and
@@ -49,7 +55,8 @@ witness the celebration of our marriage.
 
 We hope that you'll celebrate
 in your heart with best wishes from afar,
-please stay well and know that you are always in our thoughts.
+please stay well and know that
+you are always in our thoughts.
 
 Changeun and Kate(Sunee)`,
         th: `บางครั้งท้องฟ้าที่เราว่าสวยงาม 
@@ -70,17 +77,23 @@ Changeun and Kate(Sunee)`,
 ในวันที่ทุกคนสามารถกลับไปใช้ชีวิตในแบบปกติสุขได้เช่นเดิม`,
         jp: `謹啓
 
-陽春の候 皆様にはお健やかにお過ごしのことと お慶び申し上げます
-このたび 私たちは2022年4月10日から 人生を共にすることとなりました
+陽春の候
+皆様にはお健やかにお過ごしのことと
+お慶び申し上げます
+このたび 私たちは2022年4月10日から
+人生を共にすることとなりました
 
-つきましてはその新たな人生の門出の 喜びと感謝の気持ちをお伝えしたく
+つきましてはその新たな人生の門出の
+喜びと感謝の気持ちをお伝えしたく
 ささやかなウェディングパーティーを催したいと思います
 おいそがしいことと思いますが
 二人のスタートを共に祝っていただけたら幸せです
 心よりお待ちしております
 
-尚当日会場では ウイルス感染症への対策を徹底して行ってまいります
-ご心配なことやご不安なことがございましたらお気兼ねなくご連絡くださいませ
+尚当日会場では ウイルス感染症への対策を
+徹底して行ってまいります
+ご心配なことやご不安なことがございましたら
+お気兼ねなくご連絡くださいませ
 
 謹白`,
       }
@@ -108,7 +121,7 @@ pre {
   font-family: 'Gowun Batang','Single Day', serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 2vh; /* Deafult: 18px */
+  /* font-size: 2vh; Deafult: 18px */
   line-height: 48px;
   text-align: center;
   color: #231f20;
