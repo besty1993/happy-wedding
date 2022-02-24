@@ -64,76 +64,19 @@
       </a>
     </div>
 
-    <div v-show="lang==='kr'">
-      <h3 class="bus_title">하객버스 안내</h3>
-  
-
-      <vs-row
-        vs-align="center"
-        vs-justify="center"
-      >
-        <vs-col
-          vs-justify="center"
-          vs-align="center"
-          vs-lg="4"
-          vs-sm="4"
-          vs-xs="8"
-        >
-          <h3>&#9702; 서울 &#10140; 예식장</h3>
-          <p>시간 : 4월 10일 9:00 AM</p>
-          <p>장소 : 잠실역 4번 출구 방면 롯데월드 제타플렉스점 앞</p>
-          <p><br></p>
-          
-        </vs-col>
-      </vs-row>
-
-      <vs-row
-        vs-align="center"
-        vs-justify="center"
-      >
-        <vs-col
-          vs-justify="center"
-          vs-align="center"
-          vs-lg="4"
-          vs-sm="4"
-          vs-xs="8"
-        >
-          <h3>&#9702; 예식장 &#10140; 서울</h3>
-          <p>시간 : 4월 10일 14:00 PM</p>
-          <p>장소 : 숲속웨딩공원 주차장</p>
-          <p><br></p>
-          
-        </vs-col>
-      </vs-row>
-
-
-    <!-- <Button
-      v-model= "lang"
-      color="primary"
-      type="border"
-      iconsvg="fa-caret-down.svg"
-      :text="rentalBusBtnTxt[lang]"
-      @btn-click="toggleBusInfo"
-    />
-
-    <div v-show="showBusInfo">
-      <BusInfo />
-    </div> -->
-    </div>
+    <BusInfo />
   </div>
 </template>
 
 <script>
 import Map from "./Map"
-// import Button from "./Button"
-// import BusInfo from "./BusInfo"
+import BusInfo from "./BusInfo"
 
 export default {
   name: "Location",
   components: {
     Map,
-    // Button,
-    // BusInfo,
+    BusInfo,
   },
   data() {
     return {
@@ -176,12 +119,6 @@ Goesan-gun, Chungcheongbuk-do`,
           jp: "+82-43-838-1919",
         },
       },
-      rentalBusBtnTxt: {
-        kr: "하객버스 안내",
-        en: "Rental Bus Info.",
-        th: "ข้อมูลรถรับส่ง",
-        jp: "貸切バスのご案内",
-      }
     }
   },
   methods: {
@@ -323,9 +260,5 @@ span:nth-of-type(5):after {
 span:hover:after {
   width: 100%;
   left: 0;
-}
-
-.bus_title {
-  margin-bottom: 16px;
 }
 </style>

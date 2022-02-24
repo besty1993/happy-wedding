@@ -1,35 +1,80 @@
 <template>
-  <vs-row
-    vs-algin="center"
-    vs-justify="center"
-  >
-    <vs-col
-      vs-w="5"
-      vs-align="center"
+  <div v-show="lang==='kr'">
+    <h3 class="bus_title">하객버스 안내</h3>
+    <vs-row
       vs-justify="center"
     >
-      <h3>서울 -> 예식장</h3>
-      <p>장소: 잠실역 4번 출구 방면 롯데월드 제타플렉스점 앞</p>
-      <p>시간: 4월 10일 9:00 AM</p>
-    </vs-col>
-
-    <vs-col
-      vs-w="5"
-      vs-align="center"
-      vs-justify="center"
-    >
-      <h3>예식장 -> 서울</h3>
-      <p>장소: 숲속웨딩공원 주차장</p>
-      <p>시간: 4월 10일 14:00 PM</p>
-    </vs-col>
-  </vs-row>
+      <vs-col
+        v-for="(busObj, idx) in [bus_to_weddinghall, bus_to_seoul]"
+        :key="idx"
+        vs-lg="3"
+        vs-sm="4"
+        vs-xs="10"
+      >
+        <BusInfoItem
+          :departure="busObj['departure']"
+          :arrival="busObj['arrival']"
+          :departure_time="busObj['departure_time']"
+          :departure_location="busObj['departure_location']"
+        />
+      </vs-col>
+    </vs-row>
+  </div>
 </template>
 
 <script>
+import BusInfoItem from './BusInfoItem'
+
 export default {
-    name:"BusInfo",
-    props: {
-        busLocation: Array,
+  name:"BusInfo",
+  components: {
+    BusInfoItem
+  },
+  data() {
+    return {
+      rentalBusBtnTxt: {
+        kr: "하객버스 안내",
+        en: "Rental Bus Info.",
+        th: "ข้อมูลรถรับส่ง",
+        jp: "貸切バスのご案内",
+      },
+      bus_to_weddinghall: {
+        departure: "서울",
+        arrival: "예식장",
+        departure_time: "4월 10일 9:00 AM",
+        departure_location: "잠실역 4번 출구 방면 \n롯데마트 제타플렉스점 앞",
+      },
+      bus_to_seoul: {
+        departure: "예식장",
+        arrival: "서울",
+        departure_time: "4월 10일 14:00 PM",
+        departure_location: "숲속웨딩공원 주차장",
+      },
     }
+  },
+  computed: {
+    lang() {
+      var langOptions = ["kr", "en", "th", "jp"];
+      var langQuery = this.$route.query.lang;
+      if (!langOptions.includes(langQuery)) {
+        langQuery = 'kr'
+      }
+      return langQuery
+    }
+  },
 };
 </script>
+
+<style scoped>
+.bus_title {
+  margin-bottom: 16px;
+}
+
+h3, p{
+  text-align: center;
+}
+
+.vs-col {
+  vertical-align:t;
+}
+</style>
