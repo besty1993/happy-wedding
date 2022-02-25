@@ -147,6 +147,7 @@ Goesan-gun, Chungcheongbuk-do`,
 
 h3, p{
   text-align: center;
+  margin: 18px 0px;
 }
 .content {
   display: flex;
@@ -157,6 +158,11 @@ h3, p{
 #desc {
   /* display: inline-block; */
   text-align: center;
+}
+
+#desc a {
+  color: #88B077;
+  display: block;
 }
 
 #outer {
@@ -220,7 +226,7 @@ a span:hover {
 
 span {
   flex: 1 1 auto;
-  margin: 10px;
+  /* margin: 10px; */
   padding: 5px;
   text-align: center;
   text-transform: uppercase;

@@ -2,31 +2,20 @@
   <div class="bus-info-item-container">
     <h3>&#9702; {{departure}} &#10140; {{arrival}}</h3>
 
-    <vs-row vs-align="top" vs-justify="top">
-      <vs-col vs-w="12" vs-align="top" vs-justify="top">
-        <p>시간 : </p>
-        <pre>{{departure_time}}</pre>
-      </vs-col>
-      <!-- <vs-col vs-w="3">시간 : </vs-col>
-      <vs-col vs-w="9">
-        <pre>{{departure_time}}</pre>
-      </vs-col> -->
-    </vs-row>
+    <div>
+      &nbsp;&nbsp;
+      <p>시간 :</p>
+      &nbsp;
+      <pre>{{departure_time}}</pre>
+    </div>
 
-    <vs-row vs-align="top" vs-justify="top">
-      <vs-col vs-w="12" vs-align="top">
-        <p>장소 : </p>
-        <pre>{{departure_location}}</pre>
-      </vs-col>
-      <!-- <vs-col vs-w="3">장소 : </vs-col>
-      <vs-col vs-w="9">
-        <pre>{{departure_location}}</pre>
-      </vs-col> -->
-    </vs-row>
+    <div>
+      &nbsp;&nbsp;
+      <p>장소 :</p>
+      &nbsp;
+      <pre>{{departure_location}}</pre>
+    </div>
 
-    <!-- <p>시간 : {{departure_time}}</p>
-    <p>장소 : {{departure_location}}</p> -->
-    <!-- <p><br></p> -->
   </div>
 </template>
 
@@ -44,11 +33,12 @@ export default {
 
 <style>
 .bus-info-item-container {
-  margin: 20px 10px;
+  text-align: left;
 }
 
 p,pre {
   display: inline-block;
+  vertical-align: top;
 }
 
 </style>

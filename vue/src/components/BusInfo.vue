@@ -1,15 +1,11 @@
 <template>
   <div v-show="lang==='kr'">
     <h3 class="bus_title">하객버스 안내</h3>
-    <vs-row
-      vs-justify="center"
-    >
-      <vs-col
+
+      <div
         v-for="(busObj, idx) in [bus_to_weddinghall, bus_to_seoul]"
         :key="idx"
-        vs-lg="3"
-        vs-sm="4"
-        vs-xs="10"
+        class="bus_info"
       >
         <BusInfoItem
           :departure="busObj['departure']"
@@ -17,8 +13,8 @@
           :departure_time="busObj['departure_time']"
           :departure_location="busObj['departure_location']"
         />
-      </vs-col>
-    </vs-row>
+      </div>
+
   </div>
 </template>
 
@@ -66,9 +62,9 @@ export default {
 </script>
 
 <style scoped>
-.bus_title {
+/* .bus_title {
   margin-bottom: 16px;
-}
+} */
 
 h3, p{
   text-align: center;
@@ -76,5 +72,11 @@ h3, p{
 
 .vs-col {
   vertical-align:t;
+}
+
+.bus_info {
+  width: 250px;
+  display: inline-block;
+  margin: 15px 10px 0px;
 }
 </style>

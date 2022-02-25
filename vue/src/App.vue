@@ -24,6 +24,10 @@ export default {
 <style>
 /*@import './assets/styles/yourstyles.css';*/
 
+.container {
+  text-align: center;
+}
+
 * {
   font-family: 'Gowun Batang', serif;
   font-style: normal;
