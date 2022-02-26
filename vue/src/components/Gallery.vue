@@ -36,69 +36,69 @@ export default {
       img_cols: [
         [
           {
-            link: "https://drive.google.com/uc?id=1Ogz4hmDjCfPZ-UaqHjd4FTK4ps0NRAT9",
+            link: "https://github.com/besty1993/happy-wedding/blob/1-vue/vue/src/assets/thumb/img-01.jpg?raw=true",
             path: require("@/assets/thumb/thumbnail-01.jpg"),
           },
           {
-            link: "https://drive.google.com/uc?id=1wemFdOz-7Z3QR47Yca3AZTnh3U4aGuiw",
+            link: "https://github.com/besty1993/happy-wedding/blob/1-vue/vue/src/assets/thumb/img-02.jpg?raw=true",
             path: require("@/assets/thumb/thumbnail-02.jpg"),
           },
           {
-            link: "https://drive.google.com/uc?id=1Hq_0r1uhzEJDJnNgOms6suD3QZwkyN3V",
+            link: "https://github.com/besty1993/happy-wedding/blob/1-vue/vue/src/assets/thumb/img-03.jpg?raw=true",
             path: require("@/assets/thumb/thumbnail-03.jpg"),
           },
           {
-            link: "https://drive.google.com/uc?id=1fKPga6k_AXgiaw6jp8LEghBAdBcN_d9g",
+            link: "https://github.com/besty1993/happy-wedding/blob/1-vue/vue/src/assets/thumb/img-04.jpg?raw=true",
             path: require("@/assets/thumb/thumbnail-04.jpg"),
           },
         ],
         [
           {
-            link: "https://drive.google.com/uc?id=1dktXvRu2mWDzpVL6pBEfQquoAe2tBSgK",
+            link: "https://github.com/besty1993/happy-wedding/blob/1-vue/vue/src/assets/thumb/img-05.jpg?raw=true",
             path: require("@/assets/thumb/thumbnail-05.jpg"),
           },
           {
-            link: "https://drive.google.com/uc?id=1XPkKTaB19BXAiXidxf0TQL4imYh6YERV",
+            link: "https://github.com/besty1993/happy-wedding/blob/1-vue/vue/src/assets/thumb/img-06.jpg?raw=true",
             path: require("@/assets/thumb/thumbnail-06.jpg"),
           },
           {
-            link: "https://drive.google.com/uc?id=12r2iRAMsVoF22D3YCZLACblwzym5dzWz",
+            link: "https://github.com/besty1993/happy-wedding/blob/1-vue/vue/src/assets/thumb/img-07.jpg?raw=true",
             path: require("@/assets/thumb/thumbnail-07.jpg"),
           },
         ],
         [
           {
-            link: "https://drive.google.com/uc?id=1MCF_GulEEmB2vmGQvOqUwaMtiWneHkOt",
+            link: "https://github.com/besty1993/happy-wedding/blob/1-vue/vue/src/assets/thumb/img-08.jpg?raw=true",
             path: require("@/assets/thumb/thumbnail-08.jpg"),
           },
           {
-            link: "https://drive.google.com/uc?id=1tfJ_pVlSQfylmfZ_VxCjjFAaFB2WhJN6",
+            link: "https://github.com/besty1993/happy-wedding/blob/1-vue/vue/src/assets/thumb/img-09.jpg?raw=true",
             path: require("@/assets/thumb/thumbnail-09.jpg"),
           },
           {
-            link: "https://drive.google.com/uc?id=1KNTzyZ7L717YMJaT8ECXiKxgxGHm2yX2",
+            link: "https://github.com/besty1993/happy-wedding/blob/1-vue/vue/src/assets/thumb/img-10.jpg?raw=true",
             path: require("@/assets/thumb/thumbnail-10.jpg"),
           },
           {
-            link: "https://drive.google.com/uc?id=10MR1RYf96tu12Ex6GbuLxhedNTc0oNh3",
+            link: "https://github.com/besty1993/happy-wedding/blob/1-vue/vue/src/assets/thumb/img-11.jpg?raw=true",
             path: require("@/assets/thumb/thumbnail-11.jpg"),
           },
         ],
         [
           {
-            link: "https://drive.google.com/uc?id=1CphoB_IT2av158w29ALdQ22V040A5ZWc",
+            link: "https://github.com/besty1993/happy-wedding/blob/1-vue/vue/src/assets/thumb/img-12.jpg?raw=true",
             path: require("@/assets/thumb/thumbnail-12.jpg"),
           },
           {
-            link: "https://drive.google.com/uc?id=19kQvMxQgCXmABkqhAkkr4-XdHfm24SmW",
+            link: "https://github.com/besty1993/happy-wedding/blob/1-vue/vue/src/assets/thumb/img-13.jpg?raw=true",
             path: require("@/assets/thumb/thumbnail-13.jpg"),
           },
           {
-            link: "https://drive.google.com/uc?id=16J2PacPsu8S4L8TsGN0yUdaOg26WjKh2",
+            link: "https://github.com/besty1993/happy-wedding/blob/1-vue/vue/src/assets/thumb/img-14.jpg?raw=true",
             path: require("@/assets/thumb/thumbnail-14.jpg"),
           },
           {
-            link: "https://drive.google.com/uc?id=1GRIpwUwOvx58W1iE_AOlqB0tUhBRnC4G",
+            link: "https://github.com/besty1993/happy-wedding/blob/1-vue/vue/src/assets/thumb/img-15.jpg?raw=true",
             path: require("@/assets/thumb/thumbnail-15.jpg"),
           },
         ],
