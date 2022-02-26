@@ -38,7 +38,7 @@ export default {
 p {
   width: fit-content;
   display: inline-block;
-  vertical-align: center;
+  vertical-align: baseline;
 }
 
 .text {
