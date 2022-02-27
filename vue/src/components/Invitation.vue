@@ -44,7 +44,7 @@ you want it to start as soon as possible.
 Taking their first step to eternity,
 we would love to have you join us
 as we begin our Happily Ever After.
--
+
 To our international guests,
 We do understand what is happening in the world.
 Also your safety and comfort is our highest priority.

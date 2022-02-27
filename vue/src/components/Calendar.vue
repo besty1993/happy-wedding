@@ -78,7 +78,7 @@ v-calendar {
 <style>
 /* Calendar Size Adjustment */
 .vc-day {
-  width: 51px; /* default: 34px */
-  height: 48px; /* default: 32px */
+  width: 44px; /* default: 34px */
+  height: 42px; /* default: 32px */
 }
 </style>
