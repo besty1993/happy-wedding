@@ -80,14 +80,14 @@ export default {
       groomObj: {
         text: {
           kr: "신랑에게 연락하기",
-          en: "Contact the Groom",
-          th: "asdf",
-          jp: "新郎に連絡",
+          en: "Groom",
+          th: "เจ้าบ่าว",
+          jp: "新郎",
         },
         name: {
           kr: "양창은",
           en: "Changeun Yang",
-          th: "asdf2",
+          th: "ชางอึน ยัง",
           jp: "ヤン チャンウン",
         },
         contacts: [
@@ -112,15 +112,15 @@ export default {
       brideObj: {
         text: {
           kr: "신부에게 연락하기",
-          en: "Contact the Bride",
-          th: "asdf",
-          jp: "新婦に連絡",
+          en: "Bride",
+          th: "เจ้าสาว",
+          jp: "新婦",
         },
         name: {
           kr: "세라오스니",
           en: "Sunee Sae-lao",
-          th: "asdf2",
-          jp: "セ-ラオ スニ-",
+          th: "สุนีย์ แซ่เล้า",
+          jp: "セーラオ スニー",
         },
         contacts: [
           {
@@ -143,13 +143,14 @@ export default {
       },
       btnTxt: {
         kr: "혼주에게 연락하기",
-        en: "Contact Parents",
-        th: "asdf",
+        en: "Parents",
+        th: "ญาติผู้ใหญ่",
         jp: "ご両親に連絡"
       },
       groomParentsTxt: {
         kr: "신랑측 혼주",
         en: "Parents of the Groom",
+        th: "ครอบครัวเจ้าบ่าว",
         jp: "新郎のご両親",
       },
       groomParentsList: [
@@ -157,14 +158,14 @@ export default {
           text: {
             kr: "아버지",
             en: "Father",
-            th: "asdf",
+            th: "พ่อเจ้าบ่าว",
             jp: "父親",
           },
           name: {
             kr: "양선직",
             en: "Sunjik Yang",
-            th: "asdf2",
-            jp: "asdf3",
+            th: "ซนจิก ยัง",
+            jp: "ヤン スンジク",
           },
           contacts: [
             {
@@ -173,7 +174,7 @@ export default {
             },
             {
               key: "sns",
-              value: "asdf"
+              value: "โซเชียลมีเดีย"
             },
           ]
         },
@@ -181,14 +182,14 @@ export default {
           text: {
             kr: "어머니",
             en: "Mother",
-            th: "asdf",
+            th: "แม่เจ้าบ่าว",
             jp: "母親",
           },
           name: {
             kr: "유인숙",
             en: "Insook Yu",
-            th: "asdf2",
-            jp: "asdf3",
+            th: "อินซุก ยู",
+            jp: "ユ インスク",
           },
           contacts: [
             {
@@ -197,7 +198,7 @@ export default {
             },
             {
               key: "sns",
-              value: "asdf"
+              value: "โซเชียลมีเดีย"
             },
           ]
         },
@@ -205,6 +206,7 @@ export default {
       brideParentsTxt: {
         kr: "신부측 혼주",
         en: "Parents of the Bride",
+        th: "ครอบครัวเจ้าสาว",
         jp: "新婦のご両親",
       },
       brideParentsList: [
@@ -212,14 +214,14 @@ export default {
           text: {
             kr: "아버지",
             en: "Father",
-            th: "asdf",
+            th: "บิดา",
             jp: "父親",
           },
           name: {
             kr: "세라오쏨퐁",
-            en: "asdf1",
-            th: "asdf2",
-            jp: "asdf3",
+            en: "Somphong Sae-Lao",
+            th: "สมพงษ์ แซ่เล้า",
+            jp: "セーラオ ソンポン",
           },
           contacts: [
             {
@@ -236,14 +238,14 @@ export default {
           text: {
             kr: "어머니",
             en: "Mother",
-            th: "asdf",
+            th: "มารดา",
             jp: "母親",
           },
           name: {
             kr: "캄푸쏨분",
-            en: "asdf1",
-            th: "asdf2",
-            jp: "asdf3",
+            en: "Somboon Khamphoo",
+            th: "สมบุญ คำภู",
+            jp: "ソンブン カンプー",
           },
           contacts: [
             {
