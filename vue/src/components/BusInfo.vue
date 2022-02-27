@@ -2,18 +2,18 @@
   <div v-show="lang==='kr'">
     <h3 class="bus_title">하객버스 안내</h3>
 
-      <div
-        v-for="(busObj, idx) in [bus_to_weddinghall, bus_to_seoul]"
-        :key="idx"
-        class="bus_info"
-      >
-        <BusInfoItem
-          :departure="busObj['departure']"
-          :arrival="busObj['arrival']"
-          :departure_time="busObj['departure_time']"
-          :departure_location="busObj['departure_location']"
-        />
-      </div>
+    <div
+      v-for="(busObj, idx) in [bus_to_weddinghall, bus_to_seoul]"
+      :key="idx"
+      class="bus_info"
+    >
+      <BusInfoItem
+        :departure="busObj['departure']"
+        :arrival="busObj['arrival']"
+        :departure_time="busObj['departure_time']"
+        :departure_location="busObj['departure_location']"
+      />
+    </div>
 
   </div>
 </template>

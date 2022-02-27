@@ -56,8 +56,6 @@ export default {
       // const currentLanguage = this.lang
       var headerElement = document.getElementById("header");
 
-      console.log(this.lang, "asdfasdf");
-
       if (lang === 'kr') {
         headerElement.classList.add('kr_header')
         headerElement.classList.remove('en_header')
