@@ -172,8 +172,8 @@ export default {
               value: "+82-10-5464-8571",
             },
             {
-              key: "sns",
-              value: "asdf"
+              key: "kakaotalk",
+              value: "http://qr.kakao.com/talk/fBpFSkksweFImaoFWtEd95JpOBo-"
             },
           ]
         },
@@ -196,8 +196,8 @@ export default {
               value: "+82-10-3207-8571",
             },
             {
-              key: "sns",
-              value: "asdf"
+              key: "kakaotalk",
+              value: "http://qr.kakao.com/talk/fcZd_Rofncb9h8SXxjDMgTGmluY-"
             },
           ]
         },
@@ -227,7 +227,7 @@ export default {
               value: "+66-89-798-9751",
             },
             {
-              key: "sns",
+              key: "line",
               value: "https://line.me/ti/p/RpmxB16kqH#~",
             },
           ]
@@ -251,7 +251,7 @@ export default {
               value: "+66-97-030-9100",
             },
             {
-              key: "sns",
+              key: "line",
               value: "https://line.me/ti/p/sXsY6X7cCp#~",
             },
           ]
