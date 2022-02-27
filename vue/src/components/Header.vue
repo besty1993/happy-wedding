@@ -121,7 +121,6 @@ export default {
 @media screen and (max-width: 500px) {
   #header {
     background-size: 100% auto;
-    background-image: url("../assets/img/header_mobile.jpg");
     background-position: center top;
     height: 220vw;
   }
