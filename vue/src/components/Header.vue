@@ -136,6 +136,21 @@ export default {
 
 <style>
 
+/* Init Select */
+select {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+  text-transform: none;
+}
+
+#lang-select {
+  color: #231F20;
+  font-size: 12px;
+  vertical-align: 10%;
+}
+
 .ic-globe {
     width: 24px;
     height: 24px;
