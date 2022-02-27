@@ -1,10 +1,10 @@
 <template>
   <div 
-    v-show="lang==='kr'"
+    v-show="['kr','en','th'].includes(lang)"
     class="container"
     id="account-container"
   >
-    <h2>마음 보내실 곳</h2>
+    <h2>{{accountTitle[lang]}}</h2>
     <vs-row vs-justify="center" vs-align="center">
       <vs-col
         vs-lg="6"
@@ -35,7 +35,7 @@
               />
               <div v-show="showGroomAccount">
                 <AccountItem
-                  v-for="(account, idx) in groom"
+                  v-for="(account, idx) in groomKr"
                   :key="idx"
                   :text="account.type"
                   :name="account.name"
@@ -70,7 +70,7 @@
               />
               <div v-show="showBrideAccount">
                 <AccountItem
-                  v-for="(account, idx) in bride"
+                  v-for="(account, idx) in brideKr"
                   :key="idx"
                   :text="account.type"
                   :name="account.name"
@@ -84,10 +84,47 @@
 
         <!-- English Gifts -->
         <div v-show="lang==='en'">
+          <pre>{{accountText[lang]}}</pre>
         </div>
 
         <!-- Thai Account -->
         <div v-show="lang==='th'">
+          <pre>{{accountText[lang]}}</pre>
+
+          <vs-row
+            vs-lg="6"
+            vs-sm="8"
+            vs-xs="10"
+            vs-justify="center"
+            vs-align="center"
+          >
+            <vs-col
+              vs-justify="center"
+              vs-lg="10"
+              vs-sm="10"
+              vs-xs="10"
+              class="account-unit"
+            >
+              <Button
+                class="btn"
+                color="primary"
+                type="border"
+                iconsvg="fa-caret-down.svg"
+                text="신부측 계좌번호"
+                @btn-click="toggleBrideAccount"
+              />
+              <div v-show="showBrideAccount">
+                <AccountItem
+                  v-for="(account, idx) in brideTh"
+                  :key="idx"
+                  :text="account.type"
+                  :name="account.name"
+                  :bank="account.bank"
+                  :account="account.account"
+                />
+              </div>
+            </vs-col>
+          </vs-row>
         </div>
         
       </vs-col>
@@ -109,7 +146,12 @@ export default {
     return {
       showGroomAccount: false,
       showBrideAccount: false,
-      groom: [
+      accountTitle: {
+        kr: "마음 보내실 곳",
+        en: "A little note on Gifts",
+        th: "asdf",
+      },
+      groomKr: [
         {
           name: "양선직",
           bank: "하나",
@@ -123,7 +165,7 @@ export default {
           type: "신랑 계좌",
         },
       ],
-      bride: [
+      brideKr: [
         {
           name: "세라오스니",
           bank: "우리",
@@ -131,6 +173,36 @@ export default {
           type: "신부 계좌",
         },
       ],
+      brideTh: [
+        {
+          name: "sa",
+          bank: "asdf",
+          account: "1234567890",
+          type: "aszxcv"
+        }
+      ],
+      accountText: {
+        en: `We really hope that you can join us on our special day.
+Due to unforeseen circumstances, you'll make
+our memories complete in every single way.
+
+If it is your wish to bless us with a gift,
+gift of cash towards our honeymoon
+would be very much appreciated.
+However if you would prefer a gift, 
+please feel free to surprise us in your own special way.
+♡`,
+        th: `เนื่องจากมีคนสอบถามมามากมาย
+สำหรับคนที่อยากมอบของขวัญ เพื่อเป็นการอวยพรสำหรับการเริ่มต้นใหม่ของพวกเรา
+
+ถ้าหากประสงค์อยากให้เป็นสิ่งของ ท่านสามารถส่งข้อความส่วนตัวหาเรา
+เพื่อขอที่อยู่ที่ไทย หรือเกาหลีได้
+
+สำหรับท่านที่ประสงค์อยากให้เป็นอั่งเปา สามารถโอนเงินมาได้ตามเลขบัญชีด้านล่างนี้
+
+ขอบคุณสำหรับการเป็นส่วนหนึ่งในชีวิต
+และร่วมสร้างความทรงจำที่งดงามในวันสำคัญของพวกเรา`
+      }
     };
   },
   methods: {
