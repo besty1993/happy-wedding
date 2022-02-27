@@ -15,6 +15,14 @@
       />
     </div>
 
+    <div id="bus_contact">
+      <p>※ 문의 : {{ bus_contact.name }}&nbsp;</p>
+      
+      <a :href="`tel:${bus_contact.phone}`">
+        <span>{{ bus_contact.phone }}</span>
+      </a>
+    </div>
+
   </div>
 </template>
 
@@ -45,6 +53,10 @@ export default {
         arrival: "서울",
         departure_time: "4월 10일 14:00 PM",
         departure_location: "숲속웨딩공원 주차장",
+      },
+      bus_contact: {
+        name: "양창은",
+        phone: "010-7118-8571",
       },
     }
   },
@@ -79,4 +91,39 @@ h3, p{
   display: inline-block;
   margin: 15px 10px 0px;
 }
+
+/* Bus Contact & phone effect */
+#bus_contact {
+  margin: 24px 0;
+  display: block;
+}
+span {
+  color: #88B077;
+  flex: 1 1 auto;
+  /* margin: 10px; */
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+span:hover {
+  color: #88b077;
+}
+span:after {
+  position: absolute;
+  transition: 0.3s;
+  content: "";
+  width: 0;
+  left: 50%;
+  bottom: 0;
+  height: 3px;
+  background: #88b077;
+}
+span:hover:after {
+  width: 100%;
+  left: 0;
+}
+
 </style>
