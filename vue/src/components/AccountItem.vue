@@ -16,7 +16,7 @@
           vs-justify="left"
           vs-align="center"
           vs-w="9">
-        <p class="account-item-context">{{ bank }}은행 {{ account }}</p>
+        <p class="account-item-context">{{ bank }} {{ account }}</p>
         <p class="account-item-context">{{ name }}</p>
       </vs-col>
 
@@ -25,7 +25,7 @@
           vs-align="center"
           vs-w="3"
           class="right-align">
-        <button @click="copy(account)">복사하기</button>
+        <button @click="copy(account)">Copy</button>
       </vs-col>
     </vs-row>
   </div>
@@ -64,9 +64,9 @@ export default {
         document.execCommand('copy');
         element.remove();
 
-        alert("계좌번호를 복사하였습니다.");
+        alert("계좌번호를 복사하였습니다. \nThe account number has been copied.\nบันทึกหมายเลขบัญชีแล้ว");
       } catch {
-        alert("계좌번호 복사에 실패하였습니다.");
+        alert("계좌번호 복사에 실패하였습니다.\nSorry, you cannot copy the account number now. \nไม่สามารถบันทึกหมายเลขบัญชีได้ในขณะนี้");
       }
     },
   },
@@ -100,7 +100,7 @@ button {
   background-color: #88B077;
   border: none;
   color: white;
-  padding: 6px;
+  padding: 6px 16px 6px 16px;
   text-align: center;
   text-decoration: none;
   display: inline-block;

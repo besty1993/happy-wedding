@@ -7,7 +7,7 @@
     <h2>{{accountTitle[lang]}}</h2>
     <vs-row vs-justify="center" vs-align="center">
       <vs-col
-        vs-lg="6"
+        vs-lg="4"
         vs-sm="8"
         vs-xs="10"
         vs-justify="center"
@@ -20,7 +20,7 @@
             <vs-col
               vs-justify="center"
               vs-align="center"
-              vs-lg="10"
+              vs-lg="8"
               vs-sm="10"
               vs-xs="10"
               class="account-unit"
@@ -55,7 +55,7 @@
           >
             <vs-col
               vs-justify="center"
-              vs-lg="10"
+              vs-lg="8"
               vs-sm="10"
               vs-xs="10"
               class="account-unit"
@@ -84,12 +84,12 @@
 
         <!-- English Gifts -->
         <div v-show="lang==='en'">
-          <pre>{{accountText[lang]}}</pre>
+          <pre class="accountdesc">{{accountText[lang]}}</pre>
         </div>
 
         <!-- Thai Account -->
         <div v-show="lang==='th'">
-          <pre>{{accountText[lang]}}</pre>
+          <pre class="accountdesc">{{accountText[lang]}}</pre>
 
           <vs-row
             vs-lg="6"
@@ -100,7 +100,7 @@
           >
             <vs-col
               vs-justify="center"
-              vs-lg="10"
+              vs-lg="8"
               vs-sm="10"
               vs-xs="10"
               class="account-unit"
@@ -110,7 +110,7 @@
                 color="primary"
                 type="border"
                 iconsvg="fa-caret-down.svg"
-                text="신부측 계좌번호"
+                :text="btnTxt[lang]"
                 @btn-click="toggleBrideAccount"
               />
               <div v-show="showBrideAccount">
@@ -149,18 +149,22 @@ export default {
       accountTitle: {
         kr: "마음 보내실 곳",
         en: "A little note on Gifts",
-        th: "asdf",
+        th: "A little note on Gifts",
+      },
+      btnTxt: {
+        kr: "신부측 계좌번호",
+        th: "ข้อมูลบัญชี",
       },
       groomKr: [
         {
           name: "양선직",
-          bank: "하나",
+          bank: "하나은행",
           account: "34591027397207",
           type: "혼주 계좌",
         },
         {
           name: "양창은",
-          bank: "우리",
+          bank: "우리은행",
           account: "1002745899033",
           type: "신랑 계좌",
         },
@@ -168,40 +172,44 @@ export default {
       brideKr: [
         {
           name: "세라오스니",
-          bank: "우리",
+          bank: "우리은행",
           account: "1002462804593",
           type: "신부 계좌",
         },
       ],
       brideTh: [
         {
-          name: "sa",
-          bank: "asdf",
-          account: "1234567890",
-          type: "aszxcv"
+          name: "Sunee Sae-Lao",
+          bank: "KBANK",
+          account: "772-2288-37-2",
+          type: "Account"
         }
       ],
       accountText: {
-        en: `We really hope that you can join us on our special day.
-Due to unforeseen circumstances, you'll make
-our memories complete in every single way.
+        en: `We really hope that you can join us
+on our special day. Due to unforeseen 
+circumstances, you'll make our memories
+complete in every single way.
 
 If it is your wish to bless us with a gift,
 gift of cash towards our honeymoon
 would be very much appreciated.
 However if you would prefer a gift, 
-please feel free to surprise us in your own special way.
+please feel free to surprise us
+in your own special way.
+
 ♡`,
-        th: `เนื่องจากมีคนสอบถามมามากมาย
-สำหรับคนที่อยากมอบของขวัญ เพื่อเป็นการอวยพรสำหรับการเริ่มต้นใหม่ของพวกเรา
-
-ถ้าหากประสงค์อยากให้เป็นสิ่งของ ท่านสามารถส่งข้อความส่วนตัวหาเรา
-เพื่อขอที่อยู่ที่ไทย หรือเกาหลีได้
-
-สำหรับท่านที่ประสงค์อยากให้เป็นอั่งเปา สามารถโอนเงินมาได้ตามเลขบัญชีด้านล่างนี้
+        th: `สำหรับคนที่อยากมอบของขวัญ 
+ท่านสามารถส่งข้อความส่วนตัว
+เพื่อขอที่อยู่ที่ไทย หรือเกาหลีได้ 
+หรือสามารถโอนเงินมาได้
+ตามเลขบัญชีด้านล่างนี้
 
 ขอบคุณสำหรับการเป็นส่วนหนึ่งในชีวิต
-และร่วมสร้างความทรงจำที่งดงามในวันสำคัญของพวกเรา`
+และร่วมสร้างความทรงจำที่งดงาม
+ในวันสำคัญของพวกเรา
+
+`
       }
     };
   },
@@ -240,6 +248,11 @@ please feel free to surprise us in your own special way.
 
 .account-unit {
   margin: 30px 0;
+}
+
+.accountdesc{
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 </style>
 

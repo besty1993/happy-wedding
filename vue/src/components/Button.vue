@@ -36,6 +36,7 @@ export default {
 
 <style scoped>
 button {
+  font-size: 14px;
   margin: auto;
   line-height: 39px;
   width: 255px;
