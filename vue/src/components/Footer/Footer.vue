@@ -18,8 +18,8 @@ export default {
 footer { 
   display: inline-block; 
   background: 
-    url("../assets/img/footer.png") 600px 10px no-repeat,
-    url("../assets/img/footer.png") 600px 10px no-repeat;
+    url("../../assets/img/footer.png") 600px 10px no-repeat,
+    url("../../assets/img/footer.png") 600px 10px no-repeat;
   background-position: bottom;
   background-size: auto auto;
   width: 100%;

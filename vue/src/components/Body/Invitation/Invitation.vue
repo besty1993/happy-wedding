@@ -3,7 +3,7 @@
     <h2>Invitation</h2>
     <pre :style="'font-size:'+text_font_size[lang]">{{ text[lang] }}</pre>
 
-    <img src="../assets/icon/invitation_flower.svg" />
+    <img src="@/assets/icon/invitation_flower.svg" />
   </div>
 </template>
 

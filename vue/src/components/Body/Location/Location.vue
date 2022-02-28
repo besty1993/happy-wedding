@@ -42,7 +42,7 @@
       <h3>{{ weddingHall.name[lang] }}</h3>
       <pre>{{ weddingHall.location[lang] }}</pre>
       <a :href="`tel:${weddingHall.phone[lang]}`">
-        <img class="material-icons" src="../assets/icon/icon_phone.svg" />
+        <img class="material-icons" :src="iconPath('icon_phone.svg')" />
         <span class="material-icons">{{ weddingHall.phone[lang] }}</span>
       </a>
     </div>
@@ -69,8 +69,9 @@
 </template>
 
 <script>
-import Map from "./Map"
 import BusInfo from "./BusInfo"
+
+import Map from "@/components/Util/Map"
 
 export default {
   name: "Location",

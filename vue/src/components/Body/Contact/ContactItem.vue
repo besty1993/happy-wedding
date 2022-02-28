@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     getIconPath: function(iconType) {
-      return require('../assets/icon/icon_'+iconType+'.svg')
+      return require('@/assets/icon/icon_'+iconType+'.svg')
     }
   },
   computed: {

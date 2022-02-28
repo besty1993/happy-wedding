@@ -133,8 +133,9 @@
 </template>
 
 <script>
-import Button from "./Button";
 import AccountItem from "./AccountItem";
+
+import Button from "@/components/Util/Button";
 
 export default {
   name: "Account",

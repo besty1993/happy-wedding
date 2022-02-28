@@ -98,10 +98,10 @@ export default {
   background-repeat: no-repeat;
 }
 .kr_header {
-  background-image: url("../assets/img/header_fhd.jpg");
+  background-image: url("../../assets/img/header_fhd.jpg");
 }
 .en_header {
-  background-image: url("../assets/img/header_fhd_EN.jpg");
+  background-image: url("../../assets/img/header_fhd_EN.jpg");
 }
 
 @media screen and (min-width: 1070px) {
@@ -111,10 +111,10 @@ export default {
     height: 59vw;
   }
   .kr_header {
-    background-image: url("../assets/img/header_fhd.jpg");
+    background-image: url("../../assets/img/header_fhd.jpg");
   }
   .en_header {
-    background-image: url("../assets/img/header_fhd_EN.jpg");
+    background-image: url("../../assets/img/header_fhd_EN.jpg");
   }
 }
 
@@ -125,10 +125,10 @@ export default {
     height: 220vw;
   }
   .kr_header {
-    background-image: url("../assets/img/header_mobile.jpg");
+    background-image: url("../../assets/img/header_mobile.jpg");
   }
   .en_header {
-    background-image: url("../assets/img/header_mobile_EN.jpg");
+    background-image: url("../../assets/img/header_mobile_EN.jpg");
   }
 }
 </style>
@@ -153,7 +153,7 @@ select {
 .ic-globe {
     width: 24px;
     height: 24px;
-    background-image: url("../assets/icon/icon_globe.svg");
+    background-image: url("../../assets/icon/icon_globe.svg");
     display: inline-block;
     vertical-align: text-top;
     margin-right: 6px;

@@ -62,9 +62,10 @@
 </template>
 
 <script>
-import ContactItem from "./ContactItem"
-import ParentsContact from "./ParentsContact"
-import Button from "./Button";
+import ContactItem from "./ContactItem";
+import ParentsContact from "./ParentsContact";
+
+import Button from "@/components/Util/Button";
 
 export default {
   name: "Contact",

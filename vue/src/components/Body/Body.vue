@@ -12,14 +12,15 @@
 </template>
 
 <script>
-import Invitation from "./Invitation";
-import Contact from "./Contact";
-import Gallery from "./Gallery";
-import Calendar from "./Calendar";
-import Location from "./Location";
-import Dot from "./Dot";
-import Quote from "./Quote";
-import Account from "./Account";
+import Invitation from "./Invitation/Invitation";
+import Contact from "./Contact/Contact";
+import Gallery from "./Gallery/Gallery";
+import Calendar from "./Calendar/Calendar";
+import Location from "./Location/Location";
+import Quote from "./Quote/Quote";
+import Account from "./Account/Account";
+
+import Dot from "@/components/Util/Dot";
 
 export default {
   name: "Body",
