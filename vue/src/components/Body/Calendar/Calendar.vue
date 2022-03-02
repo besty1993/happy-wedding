@@ -1,12 +1,22 @@
 <template>
-  <div id="calendar-container">
-    <h2>Wedding Day</h2>
-    <v-calendar
-      color="green"
-      title-position="left"
-      trim-weeks
-      :from-page="page"
-      :attributes="attrs"
+  <div class="container">
+    <div id="calendar-container">
+      <h2>Wedding Day</h2>
+      <v-calendar
+        color="green"
+        title-position="left"
+        trim-weeks
+        :from-page="page"
+        :attributes="attrs"
+      />
+    </div>
+
+    <Countdown 
+      :year="year"
+      :month="month"
+      :day="day"
+      :hour="hour"
+      :minute="minute"
     />
   </div>
 </template>
@@ -14,13 +24,20 @@
 
 
 <script>
+import Countdown from './Countdown'
+
 export default {
   name: "Calendar",
+  components: {
+    Countdown,
+  },
   data() {
     return {
       year: 2022,
       month: 4,
       day: 10,
+      hour: 12,
+      minute: 0,
       desc: "Happy Wedding Day",
       color: "green",
     };
@@ -69,13 +86,9 @@ export default {
 /* Calendar Centerize */
 #calendar-container {
   text-align: center;
+  margin-bottom: 30px;
 }
-v-calendar {
-  display: inline-block;
-}
-</style>
 
-<style>
 /* Calendar Size Adjustment */
 .vc-day {
   width: 44px; /* default: 34px */
