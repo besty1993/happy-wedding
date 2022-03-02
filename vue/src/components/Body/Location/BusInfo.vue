@@ -45,7 +45,7 @@ export default {
       bus_to_weddinghall: {
         departure: "서울",
         arrival: "예식장",
-        departure_time: "4월 10일 9:00 AM",
+        departure_time: "4월 10일 09:00 AM",
         departure_location: "잠실역 4번 출구 방면 \n롯데마트 제타플렉스점 앞",
       },
       bus_to_seoul: {

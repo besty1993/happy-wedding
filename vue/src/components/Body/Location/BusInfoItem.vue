@@ -4,15 +4,13 @@
 
     <div>
       &nbsp;&nbsp;
-      <p>시간 :</p>
-      &nbsp;
+      <p>시간 :&nbsp;</p>
       <pre>{{departure_time}}</pre>
     </div>
 
     <div>
       &nbsp;&nbsp;
-      <p>장소 :</p>
-      &nbsp;
+      <p>장소 :&nbsp;</p>
       <pre>{{departure_location}}</pre>
     </div>
 
