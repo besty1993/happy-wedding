@@ -5,7 +5,7 @@
     <h1 id="headline">Countdown to our Wedding</h1>
     <div id="countdown">
       <ul>
-        <li><span id="days"></span>days</li>
+        <li><span id="days"></span>Days</li>
         <li><span id="hours"></span>Hours</li>
         <li><span id="minutes"></span>Minutes</li>
         <li><span id="seconds"></span>Seconds</li>
@@ -102,20 +102,25 @@ body {
 h1 {
   font-weight: normal;
   letter-spacing: .125rem;
-  text-transform: uppercase;
+  font-size: 1.2em;
 }
 
 li {
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 1em;
   list-style-type: none;
-  padding: 1em;
-  text-transform: uppercase;
+  padding: 0.9em;
+
+}
+
+li #days{
+  color: #88b077;
+  font-weight: 700;
 }
 
 li span {
   display: block;
-  font-size: 4.5rem;
+  font-size: 2.5rem;
 }
 
 .emoji {
@@ -130,15 +135,21 @@ li span {
 
 @media all and (max-width: 768px) {
   h1 {
-    font-size: calc(1.5rem * var(--smaller));
+    /* Font-size function does not working */
+    /* font-size: calc(1.5rem * var(--smaller));*/ 
+    font-size: 1.2rem;
   }
   
   li {
-    font-size: calc(1.125rem * var(--smaller));
+    /* Font-size function does not working */
+    /* font-size: calc(1.125rem * var(--smaller)); */
+    font-size: 1rem;
   }
   
   li span {
-    font-size: calc(3.375rem * var(--smaller));
+    /* Font-size function does not working */
+    /* font-size: calc(3.375rem * var(--smaller)); */
+    font-size: 1.5rem;
   }
 }
 </style>
