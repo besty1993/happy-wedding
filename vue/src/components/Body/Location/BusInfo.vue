@@ -16,7 +16,12 @@
     </div>
 
     <div id="bus_contact">
-      <p>※ 문의 : {{ bus_contact.name }}&nbsp;</p>
+      <div>
+        <p>버스 탑승 인원을 파악하기 위해&nbsp;</p>
+        <p>사전에 연락처와 탑승인원을 알려주시기 바랍니다.</p>
+      </div>
+      <br>
+      <p>※ 인솔자 : {{ bus_contact.name }}&nbsp;</p>
       
       <a :href="`tel:${bus_contact.phone}`">
         <span>{{ bus_contact.phone }}</span>
@@ -55,8 +60,8 @@ export default {
         departure_location: "숲속웨딩공원 주차장",
       },
       bus_contact: {
-        name: "양창은",
-        phone: "010-7118-8571",
+        name: "이덕휘",
+        phone: "010-6346-2564",
       },
     }
   },
