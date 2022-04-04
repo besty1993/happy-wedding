@@ -12,12 +12,12 @@
             src="https://drive.google.com/file/d/1-u-4-CluvQSHHrtwEoSdb4R57-HARyui/preview"
             allow="autoplay">
         </iframe> -->
-        <iframe 
+        <video 
             class="video"
             src="https://www.dropbox.com/s/5k7u0bhvoo6ingk/Wedding_VIDEO_KAteChangeun.mp4?dl=0&raw=1"
             allowfullscreen
             controls controlsList="nodownload">
-        </iframe>
+        </video>
         <!-- <iframe
             class="video"
             src="https://onedrive.live.com/embed?cid=54CB340473703CAF&resid=54CB340473703CAF%2110595&authkey=AKwj8uFj-aW6x-s" 
@@ -52,6 +52,7 @@ export default {
   height: 100%;
   border: 0;
 }
+
 </style>
 
 
