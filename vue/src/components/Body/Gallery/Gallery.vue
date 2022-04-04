@@ -25,12 +25,21 @@
         </vs-col>
       </vs-row>
     </vs-row>
+
+    <br />
+    
+    <Video />
   </div>
 </template>
 
 <script>
+import Video from './Video';
+
 export default {
   name: "Gallery",
+  components: {
+    Video
+  },
   data() {
     return {
       img_cols: [
