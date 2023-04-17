@@ -11,7 +11,7 @@
       />
     </div>
 
-    <Countdown 
+    <Countdown
       :year="year"
       :month="month"
       :day="day"
@@ -24,7 +24,7 @@
 
 
 <script>
-import Countdown from './Countdown'
+import Countdown from "./Countdown";
 
 export default {
   name: "Calendar",
@@ -33,7 +33,7 @@ export default {
   },
   data() {
     return {
-      year: 2022,
+      year: 2024,
       month: 4,
       day: 10,
       hour: 12,
