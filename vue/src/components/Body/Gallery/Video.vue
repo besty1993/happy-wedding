@@ -1,23 +1,19 @@
 <template>
-  <vs-row 
-      vs-justify="center"
-      class="row">
-    <vs-col
-        vs-lg="8"
-        vs-sm="10"
-        vs-xs="10">
+  <vs-row vs-justify="center" class="row">
+    <vs-col vs-lg="8" vs-sm="10" vs-xs="10">
       <div class="video-container">
         <!-- <iframe 
             class="video"
             src="https://drive.google.com/file/d/1-u-4-CluvQSHHrtwEoSdb4R57-HARyui/preview"
             allow="autoplay">
         </iframe> -->
-        <video 
-            class="video"
-            src="https://www.dropbox.com/s/5k7u0bhvoo6ingk/Wedding_VIDEO_KAteChangeun.mp4?dl=0&raw=1"
-            allowfullscreen
-            controls controlsList="nodownload">
-        </video>
+        <video
+          class="video"
+          src="https://www.dropbox.com/s/l1n62xx6rryeg25/WeddingVideo.mp4?dl=0&raw=1"
+          allowfullscreen
+          controls
+          controlsList="nodownload"
+        ></video>
         <!-- <iframe
             class="video"
             src="https://onedrive.live.com/embed?cid=54CB340473703CAF&resid=54CB340473703CAF%2110595&authkey=AKwj8uFj-aW6x-s" 
@@ -32,12 +28,10 @@
 <script>
 export default {
   name: "Video",
-
-}
+};
 </script>
 
 <style scoped>
-
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -52,7 +46,4 @@ export default {
   height: 100%;
   border: 0;
 }
-
 </style>
-
-
