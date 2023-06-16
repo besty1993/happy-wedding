@@ -22,7 +22,7 @@ export default {
       // Select Language
       const lang = event.target.value;
       // this.changeHeader(lang);
-      this.$router.push({ query: { lang: lang } });
+      this.$router.push({ path: "/happy-wedding", query: { lang: lang } });
     },
     // lang() {
     //   var langOptions = ["kr", "en", "th", "jp"];
