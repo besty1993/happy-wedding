@@ -1,10 +1,10 @@
 <template>
-  <div 
-    v-show="['kr','en','th'].includes(lang)"
+  <div
+    v-show="['kr', 'en', 'th'].includes(lang)"
     class="container"
     id="account-container"
   >
-    <h2>{{accountTitle[lang]}}</h2>
+    <h2>{{ accountTitle[lang] }}</h2>
     <vs-row vs-justify="center" vs-align="center">
       <vs-col
         vs-lg="4"
@@ -15,7 +15,7 @@
         class="account-box"
       >
         <!-- Korean Account -->
-        <div v-show="lang==='kr'">
+        <div v-show="lang === 'kr'">
           <vs-row vs-justify="center" vs-align="center">
             <vs-col
               vs-justify="center"
@@ -83,13 +83,13 @@
         </div>
 
         <!-- English Gifts -->
-        <div v-show="lang==='en'">
-          <pre class="accountdesc">{{accountText[lang]}}</pre>
+        <div v-show="lang === 'en'">
+          <pre class="accountdesc">{{ accountText[lang] }}</pre>
         </div>
 
         <!-- Thai Account -->
-        <div v-show="lang==='th'">
-          <pre class="accountdesc">{{accountText[lang]}}</pre>
+        <div v-show="lang === 'th'">
+          <pre class="accountdesc">{{ accountText[lang] }}</pre>
 
           <vs-row
             vs-lg="6"
@@ -126,7 +126,6 @@
             </vs-col>
           </vs-row>
         </div>
-        
       </vs-col>
     </vs-row>
   </div>
@@ -159,32 +158,32 @@ export default {
       groomKr: [
         {
           name: "양선직",
-          bank: "하나은행",
-          account: "34591027397207",
+          bank: "OO은행",
+          account: "01234567890",
           type: "혼주 계좌",
         },
         {
           name: "양창은",
-          bank: "우리은행",
-          account: "1002745899033",
+          bank: "OO은행",
+          account: "01234567890",
           type: "신랑 계좌",
         },
       ],
       brideKr: [
         {
           name: "세라오스니",
-          bank: "우리은행",
-          account: "1002462804593",
+          bank: "OO은행",
+          account: "01234567890",
           type: "신부 계좌",
         },
       ],
       brideTh: [
         {
           name: "Sunee Sae-Lao",
-          bank: "KBANK",
-          account: "772-2288-37-2",
-          type: "Account"
-        }
+          bank: "OO은행",
+          account: "01234567890",
+          type: "Account",
+        },
       ],
       accountText: {
         en: `We really hope that you can join us
@@ -208,8 +207,8 @@ in your own special way.
 
 ขอบคุณสำหรับการเป็นส่วนหนึ่งในชีวิต
 และร่วมสร้างความทรงจำที่งดงาม
-ในวันสำคัญของพวกเรา`
-      }
+ในวันสำคัญของพวกเรา`,
+      },
     };
   },
   methods: {
@@ -218,16 +217,16 @@ in your own special way.
     },
     toggleBrideAccount() {
       this.showBrideAccount = !this.showBrideAccount;
-    }
+    },
   },
   computed: {
     lang() {
       var langOptions = ["kr", "en", "th", "jp"];
       var langQuery = this.$route.query.lang;
       if (!langOptions.includes(langQuery)) {
-        langQuery = 'kr'
+        langQuery = "kr";
       }
-      return langQuery
+      return langQuery;
     },
   },
 };
@@ -249,7 +248,7 @@ in your own special way.
   margin: 30px 0;
 }
 
-.accountdesc{
+.accountdesc {
   margin-top: 30px;
   margin-bottom: 30px;
 }

@@ -1,5 +1,5 @@
 <template>
-  <div v-show="lang==='kr'">
+  <div v-show="lang === 'kr'">
     <h3 class="bus_title">하객버스 안내</h3>
 
     <div
@@ -20,24 +20,23 @@
         <p>버스 탑승 인원을 파악하기 위해&nbsp;</p>
         <p>사전에 연락처와 탑승인원을 알려주시기 바랍니다.</p>
       </div>
-      <br>
+      <br />
       <p>※ 인솔자 : {{ bus_contact.name }}&nbsp;</p>
-      
+
       <a :href="`tel:${bus_contact.phone}`">
         <span>{{ bus_contact.phone }}</span>
       </a>
     </div>
-
   </div>
 </template>
 
 <script>
-import BusInfoItem from './BusInfoItem'
+import BusInfoItem from "./BusInfoItem";
 
 export default {
-  name:"BusInfo",
+  name: "BusInfo",
   components: {
-    BusInfoItem
+    BusInfoItem,
   },
   data() {
     return {
@@ -60,20 +59,20 @@ export default {
         departure_location: "숲속웨딩공원 주차장",
       },
       bus_contact: {
-        name: "이덕휘",
-        phone: "010-6346-2564",
+        name: "이철수",
+        phone: "010-0000-0000",
       },
-    }
+    };
   },
   computed: {
     lang() {
       var langOptions = ["kr", "en", "th", "jp"];
       var langQuery = this.$route.query.lang;
       if (!langOptions.includes(langQuery)) {
-        langQuery = 'kr'
+        langQuery = "kr";
       }
-      return langQuery
-    }
+      return langQuery;
+    },
   },
 };
 </script>
@@ -83,12 +82,13 @@ export default {
   margin-bottom: 16px;
 } */
 
-h3, p{
+h3,
+p {
   text-align: center;
 }
 
 .vs-col {
-  vertical-align:t;
+  vertical-align: t;
 }
 
 .bus_info {
@@ -103,7 +103,7 @@ h3, p{
   display: block;
 }
 span {
-  color: #88B077;
+  color: #88b077;
   flex: 1 1 auto;
   /* margin: 10px; */
   padding: 5px;
@@ -130,5 +130,4 @@ span:hover:after {
   width: 100%;
   left: 0;
 }
-
 </style>

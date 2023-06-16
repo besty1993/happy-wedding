@@ -4,7 +4,7 @@
     <ContactItem :data="groomObj" />
     <ContactItem :data="brideObj" />
 
-    <div v-show="(lang==='kr')||(lang==='th')">
+    <div v-show="lang === 'kr' || lang === 'th'">
       <Button
         v-model="lang"
         class="btn"
@@ -15,10 +15,7 @@
         @btn-click="toggleParentsContact"
       />
       <div v-show="showMinorContact">
-        <vs-row
-          vs-justify="center"
-          vs-align="center"
-        >
+        <vs-row vs-justify="center" vs-align="center">
           <vs-col
             vs-justify="center"
             vs-align="center"
@@ -94,21 +91,21 @@ export default {
         contacts: [
           {
             key: "phone",
-            value: "+82-10-7118-8571"
+            value: "+82-10-0000-0000",
           },
           {
             key: "messenger",
-            value: "https://m.me/besty1993",
+            value: "https://m.me/Saranghada.house",
           },
           {
             key: "line",
-            value: "https://line.me/ti/p/1oS8VivYmG#~",
+            value: "https://line.me/ti/p/",
           },
           {
             key: "kakaotalk",
-            value: "http://qr.kakao.com/talk/GOK_CkRf2xxUlpP5txKxJfnvbgc-",
-          }
-        ]
+            value: "http://qr.kakao.com/talk/",
+          },
+        ],
       },
       brideObj: {
         text: {
@@ -126,27 +123,27 @@ export default {
         contacts: [
           {
             key: "phone",
-            value: "+82-10-2719-8571",
+            value: "+82-10-0000-0000",
           },
           {
             key: "messenger",
-            value: "https://m.me/waldorfxx",
+            value: "https://m.me/Saranghada.house",
           },
           {
             key: "line",
-            value: "https://line.me/ti/p/1f-uwtKqdS#~",
+            value: "https://line.me/ti/p/",
           },
           {
             key: "kakaotalk",
-            value: "http://qr.kakao.com/talk/ylX4r.oiQpxVB33way2WwdjJU.s-",
+            value: "http://qr.kakao.com/talk/",
           },
-        ]
+        ],
       },
       btnTxt: {
         kr: "혼주에게 연락하기",
         en: "Parents",
         th: "ญาติผู้ใหญ่",
-        jp: "ご両親に連絡"
+        jp: "ご両親に連絡",
       },
       groomParentsTxt: {
         kr: "신랑측 혼주",
@@ -171,13 +168,13 @@ export default {
           contacts: [
             {
               key: "phone",
-              value: "+82-10-5464-8571",
+              value: "+82-10-0000-0000",
             },
             {
               key: "kakaotalk",
-              value: "http://qr.kakao.com/talk/fBpFSkksweFImaoFWtEd95JpOBo-"
+              value: "http://qr.kakao.com/talk/",
             },
-          ]
+          ],
         },
         {
           text: {
@@ -195,13 +192,13 @@ export default {
           contacts: [
             {
               key: "phone",
-              value: "+82-10-3207-8571",
+              value: "+82-10-0000-0000",
             },
             {
               key: "kakaotalk",
-              value: "http://qr.kakao.com/talk/fcZd_Rofncb9h8SXxjDMgTGmluY-"
+              value: "http://qr.kakao.com/talk/",
             },
-          ]
+          ],
         },
       ],
       brideParentsTxt: {
@@ -227,13 +224,13 @@ export default {
           contacts: [
             {
               key: "phone",
-              value: "+66-89-798-9751",
+              value: "+66-00-000-0000",
             },
             {
               key: "line",
-              value: "https://line.me/ti/p/RpmxB16kqH#~",
+              value: "https://line.me/ti/p/",
             },
-          ]
+          ],
         },
         {
           text: {
@@ -251,23 +248,22 @@ export default {
           contacts: [
             {
               key: "phone",
-              value: "+66-97-030-9100",
+              value: "+66-00-000-0000",
             },
             {
               key: "line",
-              value: "https://line.me/ti/p/sXsY6X7cCp#~",
+              value: "https://line.me/ti/p/",
             },
-          ]
+          ],
         },
-      ]
+      ],
     };
   },
   methods: {
     toggleParentsContact() {
       if (this.showMinorContactBtn) {
         this.showMinorContact = !this.showMinorContact;
-      }
-      else {
+      } else {
         this.showMinorContact = false;
       }
     },
@@ -277,14 +273,14 @@ export default {
       var langOptions = ["kr", "en", "th", "jp"];
       var langQuery = this.$route.query.lang;
       if (!langOptions.includes(langQuery)) {
-        langQuery = 'kr'
+        langQuery = "kr";
       }
-      return langQuery
-    }
+      return langQuery;
+    },
   },
   mounted() {
-    const currentLang = this.lang
-    this.showMinorContactBtn = (currentLang==='kr')||(currentLang==='th');
+    const currentLang = this.lang;
+    this.showMinorContactBtn = currentLang === "kr" || currentLang === "th";
   },
 };
 </script>
@@ -292,7 +288,5 @@ export default {
 <style scoped>
 .contact-container {
   text-align: center;
-
 }
-
 </style>
