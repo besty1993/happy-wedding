@@ -12,7 +12,6 @@
       </form>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -23,7 +22,7 @@ export default {
       // Select Language
       const lang = event.target.value;
       // this.changeHeader(lang);
-      this.$router.push({ path: '/', query: { lang: lang }})
+      this.$router.push({ query: { lang: lang } });
     },
     // lang() {
     //   var langOptions = ["kr", "en", "th", "jp"];
@@ -35,12 +34,12 @@ export default {
     // },
     // lang() {
     //   // Parse query : https://stackoverflow.com/questions/35914069/how-can-i-get-query-parameters-from-a-url-in-vue-js
-    //   let uri = window.location.search.substring(1); 
+    //   let uri = window.location.search.substring(1);
     //   let params = new URLSearchParams(uri);
     //   var langQuery = params.get("lang");
 
     //   const langOptions = ["kr", "en", "th", "jp"];
-      
+
     //   if (!langOptions.includes(langQuery)) {
     //     langQuery = 'kr'
     //   }
@@ -48,32 +47,31 @@ export default {
     //   return langQuery
     // },
     initSelector() {
-      const currentLanguage = this.lang
-      document.getElementById('lang-select').value=currentLanguage;
+      const currentLanguage = this.lang;
+      document.getElementById("lang-select").value = currentLanguage;
     },
     changeHeader(lang) {
       // Header change by language
       // const currentLanguage = this.lang
       var headerElement = document.getElementById("header");
 
-      if (lang === 'kr') {
-        headerElement.classList.add('kr_header')
-        headerElement.classList.remove('en_header')
+      if (lang === "kr") {
+        headerElement.classList.add("kr_header");
+        headerElement.classList.remove("en_header");
+      } else {
+        headerElement.classList.add("en_header");
+        headerElement.classList.remove("kr_header");
       }
-      else {
-        headerElement.classList.add('en_header')
-        headerElement.classList.remove('kr_header')
-      }
-    }
+    },
   },
   computed: {
     lang() {
       var langOptions = ["kr", "en", "th", "jp"];
       var langQuery = this.$route.query.lang;
       if (!langOptions.includes(langQuery)) {
-        langQuery = 'kr'
+        langQuery = "kr";
       }
-      return langQuery
+      return langQuery;
     },
   },
   mounted() {
@@ -81,11 +79,11 @@ export default {
     this.changeHeader(this.lang);
   },
   watch: {
-    '$route' () {
+    $route() {
       this.initSelector();
       this.changeHeader(this.lang);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -134,7 +132,6 @@ export default {
 </style>
 
 <style>
-
 /* Init Select */
 select {
   font-family: inherit; /* 1 */
@@ -145,37 +142,35 @@ select {
 }
 
 #lang-select {
-  color: #231F20;
+  color: #231f20;
   font-size: 12px;
   vertical-align: 10%;
 }
 
 .ic-globe {
-    width: 24px;
-    height: 24px;
-    background-image: url("../../assets/icon/icon_globe.svg");
-    display: inline-block;
-    vertical-align: text-top;
-    margin-right: 6px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../../assets/icon/icon_globe.svg");
+  display: inline-block;
+  vertical-align: text-top;
+  margin-right: 6px;
 }
 
 .lang-menu {
   float: right;
   padding: 16px 24px 0 0;
-
 }
 
 select {
-  background-color: rgba(255,255,255,.0);
+  background-color: rgba(255, 255, 255, 0);
   border: 0px solid #fff;
   transition: 0.3s ease;
 }
 
-select:hover{
-  background-color: rgba(255,255,255,.2);
-  
+select:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+
   border-radius: 20px;
   padding: 0 8px 0 8px;
 }
-
 </style>
